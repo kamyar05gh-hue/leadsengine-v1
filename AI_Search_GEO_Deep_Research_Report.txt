@@ -1,0 +1,904 @@
+--- PAGE 1 ---
+DEEP RESEARCH REPORT · 2026
+Reverse-Engineering
+AI Search
+The complete GEO / AEO playbook — how platforms like HeyLead.ai,
+Profound, Otterly.ai and Peec.ai get businesses ranked #1 inside AI
+answers, and how to build a superior service yourself.
+ChatGPT / SearchGPT
+ Perplexity
+ Google Gemini & AI Overviews
+ Claude
+ Copilot
+4 Core Sections
+Landscape · Backend Teardown · Service Blueprint · Swiss Case Study
+August 2026
+Technical & Actionable Edition
+--- PAGE 2 ---
+Contents
+Executive Summary
+Executive Summary 3
+Section 1 — Industry Landscape & Technical Foundations 3
+1.1 GEO vs. Traditional SEO — Terminology & Mechanics 3
+1.2 The LLM Citation Ecosystem — Source Hierarchies per Engine 5
+Section 2 — Reverse Engineering the Backend 7
+2.0 The Platform Landscape (Profound · Otterly · Peec · HeyLead) 7
+2.1 AI Visibility Auditing & Benchmarking 8
+2.2 Knowledge Graph Alignment & Entity Optimization 9
+2.3 Citation & Digital PR Engineering 10
+2.4 Semantic Content Structuring (Writing for RAG) 11
+2.5 Crawler Management — robots.txt & Indexation 12
+Section 3 — Step-by-Step Service & Product Blueprint 13
+3.1 The AI Search Readiness & Ranking Audit 13
+3.2 The 30-60-90 Execution Roadmap 14
+3.3 The Software Architecture Blueprint 15
+Section 4 — Case Study: "Best Health Center for Elders in Bern" 16
+Appendix A — Key Benchmarks & Data Points 19
+Appendix B — Tooling Stack: Build vs. Buy 20
+References 21
+GEO (Generative Engine Optimization) is the discipline of making a business the answer AI engines give
+— not just a link they list. The unit of competition has shifted from the ranked page to the cited fact and the
+named brand.
+AI visibility is won off-site as much as on-site. Brand mentions correlate with AI visibility at 0.664 — three
+times stronger than backlinks (0.218) — and earned media accounts for roughly 25% of all LLM citations.
+Each engine runs a different retrieval backbone: ChatGPT/Copilot on Bing, Gemini on the Google index
++ Knowledge Graph, Claude on Brave Search, Perplexity on its own hybrid index. One-size-fits-all
+optimization is structurally blind.
+Local queries are unusually winnable: ~59% of local-intent prompts trigger live web search in ChatGPT
+(vs ~31% average), and Perplexity cites niche-authority domains with fewer than 10 referring domains
+92.78% of the time.
+--- PAGE 3 ---
+Reverse-EngineeringAI Search GEO / AEO Deep Research
+3
++40%
+Max visibility lift from GEO
+methods (Princeton, KDD
+2024)
+15%
+Of pages retrieved by
+ChatGPT are ever cited —
+85% are dropped
+3.2×
+More citations for content
+updated within 30 days
+41%
+Of B2B sites still block at
+least one major AI bot
+01Industry Landscape & Technical Foundations
+1.1 GEO vs. Traditional SEO — Terminology & Mechanics
+Table 1 — SEO vs. GEO — the operating model shift
+Dimension Traditional SEO GEO / AEO
+Target surface Ranked list of blue links (SERP) Synthesized answer with inline citations & brand
+mentions
+Ranking unit Page (URL) Fact, claim, entity, extractable text chunk
+Core signals Keywords, backlinks, technical health Entity clarity, factual density, third-party consensus,
+extractability
+Success metric Position, CTR, organic sessions Share of AI Voice, citation rate, mention sentiment,
+AI-referral conversions
+Index
+dependency
+Google index Bing (ChatGPT/Copilot), Google + KG (Gemini),
+Brave (Claude), Perplexity index
+Keyword
+stuffing
+Weak but historically worked Performs worse than baseline in generative engines
+(Princeton GEO study)
+Working definitions
+How RAG and vector search actually drive the answer
+When a user asks "Best health centers for seniors in Bern", the engine does not keyword-match. It runs a five-
+stage pipeline:
+1 Intent parsing & query fan-out
+The LLM decomposes the prompt into 2–4+ sub-queries (ChatGPT: 89.6% of prompts; Google AI Mode:
+5–11). E.g. "Alterszentrum Bern Bewertungen", "nursing home Bern costs", "Pflegeheim Bern Rangliste".
+The winning agencies are not "doing SEO better." They engineer a cross-platform entity consensus —
+structured data, Wikidata, directories, reviews, digital PR — that LLMs can trust and quote.
+GEO — structuring content, entities and off-site signals so generative engines cite your pages and name
+your brand inside synthesized answers. Formalized by Aggarwal et al. (Princeton / Georgia Tech / IIT Delhi,
+KDD 2024): up to +40% visibility lift, led by Statistics Addition, Cite Sources and Quotation Addition.
+AEO — the overlapping discipline of being the direct answer (featured snippets → AI Overviews → chat
+answers). In practice the industry uses GEO/AEO interchangeably.
+Share of AI Voice (SOV) — the % of tracked category prompts where your brand is mentioned or cited vs.
+competitors. The GEO equivalent of rank tracking.
+--- PAGE 4 ---
+Reverse-EngineeringAI Search GEO / AEO Deep Research
+4
+2 Retrieval
+Sub-queries run against the engine's search index via BM25 (keyword)
+and
+dense vector retrieval (semantic embeddings — Perplexity uses its own pplx-embed models).
+3 Reranking
+Candidates scored on authority, freshness, entity relevance and structure. Perplexity runs a 3-layer ML
+reranker with a ~0.7 quality threshold — and discards the whole set and re-queries if too few results
+pass.
+4 Citation selection
+The model picks sentence-level facts and attaches the source that stated each fact most cleanly. Only 3–
+6 citations typically survive;
+only ~15% of retrieved pages ever get cited
+.
+5 Synthesis
+The LLM writes the answer constrained by retrieved evidence, attaching inline citations.
+KEY DISTINCTION — TWO VISIBILITY STATES
+Mentions: brand named from training memory (no link; ChatGPT mentions brands ~3× more often than it
+cites them). Citations: clickable sources, only in browse/RAG mode. Track both separately.
+Figure 1 — The retrieval funnel — retrieval is not citation; 85% of retrieved pages are dropped
+Vector search implication: content must be the semantic best match for fan-out sub-queries you never
+explicitly targeted — a third of all cited pages enter via a fan-out query, not the original question. Topical
+cluster coverage beats single-page optimization.
+Local advantage: ~31% of ChatGPT prompts trigger web search overall — but ~59% for local queries,
+making local GEO disproportionately winnable (Figure 2).
+--- PAGE 5 ---
+Reverse-EngineeringAI Search GEO / AEO Deep Research
+5
+Figure 2 — Share of ChatGPT prompts that trigger live web retrieval, overall vs. local intent
+1.2 The LLM Citation Ecosystem — Source Hierarchies per Engine
+Each engine has a different retrieval backbone. A GEO strategy that ignores this is blind.
+Table 2 — Master map — how each engine retrieves, grounds and cites
+Engine Retrieval
+backbone Knowledge layer Local query
+sources Crawlers Citation
+character
+ChatGPT /
+SearchGPT
+Bing index
+(primary) + OAI-
+SearchBot crawl
+Training memory +
+live RAG
+Bing Places, Yelp,
+Facebook reviews,
+TripAdvisor,
+directories
+GPTBot ·
+OAI-
+SearchBot ·
+ChatGPT-
+User
+Broad authority;
+Wikipedia &
+Reddit ~12–13%
+of citations each
+Perplexity Own index + partner
+APIs; hybrid BM25 +
+dense retrieval
+Live RAG only —
+every answer
+grounded
+Google Maps/GBP
+data, Yelp,
+Foursquare,
+TripAdvisor
+PerplexityBot
+· Perplexity-
+User (ignores
+robots.txt)
+Niche topical
+authority beats big
+domains; 92.78%
+of cited pages
+have <10 referring
+domains
+Gemini / AI
+Overviews
+/ AI Mode
+Google index Knowledge Graph
+(500B+ facts, 5B+
+entities — Gemini
+is trained on it)
+Google Business
+Profile, Maps, review
+text, GBP attributes
+Googlebot
+(search +
+AIO) ·
+Google-
+Extended
+(training
+token)
+~92–94% of AIO
+citations from top-
+10 organic pages;
+AI Mode shares
+only 13.7%
+citation overlap
+with AIO
+Claude Brave Search index
+(encrypted live
+retrieval)
+Training memory +
+web search tool
+Practitioner blogs,
+deep /blog/ pages,
+listicles,
+documentation
+ClaudeBot ·
+Claude-
+SearchBot ·
+Claude-User
+Most selective:
+56% of cited
+URLs are /blog/
+paths, 47%
+listicles
+--- PAGE 6 ---
+Reverse-EngineeringAI Search GEO / AEO Deep Research
+6
+Copilot Bing index
++ Bing
+Places
+Bing Knowledge
++ GPT reasoning
+Bing Places,
+Facebook/Yelp
+aggregations
+Bingbot;
+NOARCHIVE/NOCACHE meta
+as controls
+Mirrors Bing
+ecosystem
+Cross-engine source tiers (what all engines disproportionately cite)
+1 Reference / encyclopedic
+Wikipedia, Wikidata — structured, neutral, fact-dense.
+2 Community / discussion
+Reddit, Quora — reads as first-hand experience. Note: volatile (Reddit swung ~60% → ~10% citation
+share within two weeks in late 2025).
+3 Established media
+Editorial trust — Forbes, Reuters, NZZ; earned media ≈ 25% of all LLM citations.
+4 Commerce / review / directory
+G2, Capterra, Yelp, Trustpilot, local directories. Sites with Trustpilot presence average 4.6–6.3 citations
+vs 1.8 without.
+THE FOUR SOURCE TYPES BEHIND EVERY LOCAL AI ANSWER
+(1) The business's own website · (2) Google Business Profile / Bing Places data · (3) Review platforms —
+read as text; AI quotes review language verbatim · (4) Directory & aggregator listings. Conflicting facts
+across these sources (name, address, phone, hours, services) directly suppress recommendation
+confidence.
+Figure 3 — Correlation with AI visibility: brand mentions (0.664) vs. backlinks (0.218) — Ahrefs, 75,000 brands
+REVERSE-ENGINEERED WEIGHTING (DIRECTIONAL, NOT OFFICIAL)
+Community consensus estimate: Authority & credibility ~40% · Content quality & utility ~35% · Platform
+trust ~25%. No vendor publishes its formula — treat all weightings in this report as directional and re-
+validate quarterly.
+--- PAGE 7 ---
+Reverse-EngineeringAI Search GEO / AEO Deep Research
+7
+02Reverse Engineering the Backend — What GEO Platforms
+Actually Do
+2.0 The Platform Landscape
+Table 3 — Who does what — the major GEO platforms and HeyLead.ai
+Platform HQ / backing Model What it actually does Pricing signal
+Profound NYC · $58.5M+
+raised (Khosla,
+Kleiner, Sequoia)
+Enterprise
+SaaS
+Answer Engine Insights (visibility, SOV,
+sentiment, citations across 11 engines) · Prompt
+Volumes (real-user conversation panel) · Agent
+Analytics (AI bot traffic) · no-code Agents that
+draft/optimize content
+$99–499/mo
+entry ·
+Enterprise $2–
+5k+/mo
+Otterly.ai Persenbeug,
+Austria ·
+bootstrapped
+SMB SaaS Prompt-library monitoring across 7 engines, 65+
+countries/languages · citation & brand tracking,
+sentiment · crawlability checker, content audit,
+query fan-out tool · API/MCP/Looker Studio
+From $29/mo
+Peec.ai Berlin · $29.1M
+Series A
+Mid-market
+SaaS
+Daily prompt execution per model/country ·
+visibility score, position & sentiment · "used" vs
+"cited" source separation at domain/URL level ·
+competitor benchmarking · Looker/API/MCP
+From ~€89–
+95/mo
+Scrunch Salt Lake City ·
+$19M
+SaaS + AXP All 7 engines ungated ·
+hallucination/misinformation detection · Agent
+Experience Platform
+From
+~$250/mo
+HeyLead.ai Switzerland Service +
+product hybrid
+Free AI-visibility scan in a client portal (score per
+engine, gaps, strategy recommendations) → paid
+"AI Feed": 100–400 optimized pages published,
+backlinks built, old pages auto-refreshed on a
+compounding monthly cycle
+Portal free ·
+execution
+retainer
+--- PAGE 8 ---
+Reverse-EngineeringAI Search GEO / AEO Deep Research
+8
+Figure 4 — Entry pricing across the GEO platform landscape
+HEYLEAD.AI TEARDOWN — THE FUNNEL, MECHANICALLY
+(1) Free measurement as lead magnet — automated multi-engine scan producing a score ("Overall
+58/100, ChatGPT 72, Perplexity 41, 3 gaps"). (2) The AI Feed — programmatic generation of 100–400
+structured pages (service × location × question permutations = fan-out coverage at scale). (3)
+Compounding loop — continuous deployment + backlink acquisition + automated refreshes, sold as "the
+longer it runs, the stronger it gets." Their published timeline: pages live months 1–2, first AI citations from
+month 3. This is programmatic SEO rebuilt for RAG extraction, wrapped in a monitoring
+dashboard.
+2.1 AI Visibility Auditing & Benchmarking
+The synthetic prompt testing method — the industry standard for measuring Share of Voice:
+1 Prompt library construction
+50–500 conversational prompts mirroring real queries, tagged by persona, funnel stage, language and
+region. Sources: keyword→prompt conversion, sales/support logs, People Also Ask, AlsoAsked, and
+(enterprise) Profound's real-conversation panel.
+2 Scheduled multi-engine execution
+Each prompt executed on every tracked engine on a fixed cadence (Peec: once/24h per model per
+country). Via official APIs (cheap, but answers differ from the consumer UI) or browser-fidelity capture
+(Profound's differentiator — the real rendered experience users see).
+3 Response parsing
+Per answer: brand mentioned? cited (URL linked)? position in answer (first recommendation vs
+footnote)? sentiment (enthusiastic / caveated / dismissed)? cited domains/URLs.
+4 Metric computation
+Brand coverage rate · Share of AI Voice (brand mentions ÷ total category mentions) · citation frequency
+per domain/URL · composite visibility score (HeyLead's "58/100") · LLM-classified sentiment score.
+--- PAGE 9 ---
+Reverse-EngineeringAI Search GEO / AEO Deep Research
+9
+5 Gap analysis
+Where competitors are cited and the client is not → which third-party domains to target, which content to
+build. Otterly ships this as "Recommendations"; Peec as source-level opportunity reports.
+STATISTICAL HONESTY
+LLM answers are non-deterministic — the same prompt yields different sources on different days. Serious
+platforms mitigate with daily repetition and trend-line reporting, never single snapshots. Evertune
+differentiates on rigor: base-model API access with 1M+ prompts/month per brand.
+2.2 Knowledge Graph Alignment & Entity Optimization
+The "anchor the business as a recognized entity" layer — the canonical four-layer stack plus connector:
+Table 4 — The entity stack
+Layer Asset Effort AI weight
+1 Crunchbase — legal entity anchor:
+founded, founders, category, HQ
+1–2 h Read by ChatGPT, Perplexity, Gemini, Claude
+2 LinkedIn Company Page —
+corroboration layer
+2–4 h Read by all major engines
+3 Wikidata — structured, queryable QID;
+no notability requirement, any
+legitimate business can enter
+4–8 h Heaviest on Gemini; moderate elsewhere; every
+major AI training pipeline ingests it
+4 Wikipedia — only with genuine press
+coverage (notability-gated)
+Variable Heaviest weight across all engines
+⊕ sameAs JSON-LD — wires all profiles
+to the website entity
+1–2 h Read by every crawler that parses JSON-LD;
+officially supported by Google
+THE PAYOFF CHAIN
+Entity establishment → Knowledge Graph inclusion → Gemini training data → AI Overview / AI Mode
+citations. Because Gemini is trained on the Knowledge Graph, brands with resolved entities hold a
+structural advantage.
+Entity home. Designate one page (usually About) as the canonical entity anchor with @id and full
+Organization/LocalBusiness JSON-LD. Google's Knowledge Panel description is increasingly pulled from
+this page when no Wikipedia entry exists.
+Wikidata entry. Complete properties (inception, HQ, industry, official website, GLN/UID for Swiss
+companies) with references.
+knowsAbout property — severely underused; declares topical authority domains to the Knowledge Graph.
+Entity consistency deployment — standardized name, description, category and NAP across 50+ sources;
+entity ambiguity measurably reduces AI confidence.
+Entity linking in content — mentions schema pointing to Wikidata entities for discussed concepts.
+--- PAGE 10 ---
+Reverse-EngineeringAI Search GEO / AEO Deep Research
+10
+2.3 Citation & Digital PR Engineering
+The off-site layer — inverting traditional link-building math:
+95%
+Of AI-cited links come from earned
+(non-paid) sources — Muck Rack, 1M+
+citations
++239%
+Median brand-citation lift from
+syndicating articles across third-party
+news sites (Stacker × Scrunch, 2026)
+5×
+Growth of wire-distributed press
+releases as AI citations (Jul → Dec
+2025)
+The six compounding PR tactics agencies run
+Community & directory seeding
+Original research / proprietary data studies —
+the single strongest citation magnet (statistics
+addition is also the #1 on-page GEO factor).
+Expert commentary via HARO-successors,
+Qwoted, Featured — with structured-format
+pitches.
+Wire syndication — PR Newswire is a top-20 AI-
+cited domain.
+Executive thought leadership with Author
+schema on bylines.
+Reactive newsjacking.
+Trade bylines in vertical publications — for DACH:
+Heise, t3n, NZZ, Handelszeitung (German-
+language AI answers lean on DACH-specific
+media).
+Reddit / Quora: genuine, non-promotional participation — among the most-cited domains on ChatGPT and
+Perplexity, but volatile and spam-sensitive.
+Review platforms: Trustpilot presence alone moves averages from 1.8 → 4.6–6.3 citations. For local:
+Facebook and Yelp dominate Bing Places review sourcing (Facebook 716 vs Yelp 482 vs TripAdvisor 217
+occurrences in Whitespark's 153-query study) — and Bing Places feeds ChatGPT local
+recommendations.
+Niche directories: category-specific listings (for Swiss healthcare: comparis.ch, local.ch, search.ch —
+Section 4).
+Bing index optimization: sitemap to Bing Webmaster Tools + claim Bing Places — the most-overlooked
+ChatGPT lever, since ChatGPT retrieval runs on Bing infrastructure.
+--- PAGE 11 ---
+Reverse-EngineeringAI Search GEO / AEO Deep Research
+11
+2.4 Semantic Content Structuring — Writing for RAG Extraction
+Figure 5 — Measured citation multipliers for the highest-impact content and schema levers
+Structural rules (evidence-backed)
+SCHEMA STACK (JSON-LD, VALIDATED)
+Pages with schema show a 47% Top-3 citation rate vs 28% without; FAQ-schema pages are ~2.8× more
+likely cited. The local stack: LocalBusiness (most specific subtype) + Service + FAQPage +
+AggregateRating/Review + Organization + BreadcrumbList. Full template in Section 4.
+BLUF — answer in the first 60–100 words. 90%
+of top Perplexity citations follow this; 44.2% of all
+LLM citations come from the first 30% of a page.
+Chunk-level self-containment. Each H2/H3
+section understandable in isolation — AI extracts
+discrete answer chunks, not whole pages. Lead
+sections with a 1–2 sentence direct answer.
+Question-based headings mirroring fan-out sub-
+queries — ~7× citation impact for smaller domains.
+Factual density: specific statistics, named
+sources, dates, direct quotes — the Princeton top-3
+methods.
+Freshness: content updated <30 days gets 3.2×
+more citations; monthly refresh is a non-
+negotiable retainer task.
+Tables & structured comparisons — machine-
+liftable formats win citation selection over prose.
+EAV clarity: state facts as standalone declarative
+sentences ("The center offers 120 residential
+places, 24/7 nursing care, and specialized
+dementia units in Bern.") — the model lifts the
+sentence that needs no editing.
+E-E-A-T surface signals for YMYL
+(health/legal/finance): author credentials,
+methodology, awards — pulled from across the
+web, not just your site.
+Topic cluster architecture: pillar + cluster pages covering every fan-out branch (costs, comparisons,
+alternatives, "vs", location variants) with contextual internal linking — this is how you enter the candidate
+pool through multiple sub-queries. This is precisely what HeyLead's 100–400 page "AI Feed"
+industrializes.
+--- PAGE 12 ---
+Reverse-EngineeringAI Search GEO / AEO Deep Research
+12
+2.5 Crawler Management — robots.txt & Indexation
+41% of B2B sites still block at least one major AI bot — usually leftover 2023 "block everything" rules —
+costing an estimated 18–34% of potential citations per blocked engine.
+Table 5 — The AI bot matrix — every provider runs two bot families
+Bot Operator Function Block cost
+GPTBot OpenAI Training No search visibility cost
+OAI-SearchBot OpenAI ChatGPT search indexing Critical You vanish from ChatGPT answers
+ChatGPT-User OpenAI Live user-initiated fetch May ignore robots.txt
+ClaudeBot Anthropic Training No direct citation cost
+Claude-
+SearchBot
+Anthropic Search retrieval High Reduced Claude visibility
+PerplexityBot Perplexity Search retrieval (pure) Critical No Perplexity citations
+Perplexity-
+User
+Perplexity Live fetch Openly ignores robots.txt
+Google-
+Extended
+Google Control token, not a crawler
+— controls Gemini training
+only
+None Zero effect on rankings or AI Overviews
+Applebot-
+Extended
+Apple Control token (training opt-
+out)
+None on search
+Recommended default policy for GEO clients
+Allow search/retrieval bots, decide training bots per IP strategy, keep sensitive paths blocked for all, always
+reference sitemaps:
+# --- AI search/retrieval bots: ALLOW (citation eligibility) ---
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+# --- Training bots: business decision ---
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Technical rendering: AI crawlers are poor JavaScript executors — core content must exist in server-
+rendered HTML.
+--- PAGE 13 ---
+Reverse-EngineeringAI Search GEO / AEO Deep Research
+13
+# --- Universal protections ---
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /checkout/
+Disallow: /account/
+Sitemap: https://yourdomain.ch/sitemap.xml
+COMMON AUDIT FINDINGS
+· Leftover Disallow: / under GPTBot
+· Allowing GPTBot but forgetting OAI-SearchBot
+(kills ChatGPT citations anyway)
+· Cloudflare's "Block AI Bots" toggle
+overriding robots.txt silently
+· noindex on pages meant to be cited · sitemap
+path blocked
+ENFORCEMENT REALITY
+robots.txt is advisory. Perplexity was
+documented using undeclared rotating crawlers
+(Cloudflare, Aug 2025); ChatGPT-User and
+Perplexity-User openly disregard it. Hard stops
+require WAF/IP-range rules — all major vendors
+publish machine-readable IP lists. Verify real
+bots via reverse DNS.
+LLMS.TXT — THE HONEST VERDICT
+SE Ranking's 300k-domain study found no statistically significant correlation with AI citations;
+Otterly's 90-day experiment saw only 0.1% of AI bot traffic touch the file; no major provider has committed
+to it. Verdict: 30 minutes to implement, near-zero downside — but it is not a ranking lever. Don't sell it
+as one.
+03Step-by-Step Service & Product Blueprint
+3.1 The "AI Search Readiness & Ranking Audit" — Your Front-End Product
+Package it exactly like HeyLead's free portal scan: low-friction, high-perceived-value, converts prospects. Five
+modules:
+Table 6 — The five audit modules
+Module What you do & deliver
+A · Visibility Baseline
+score
+Build a 30–60 prompt library (category, best-of, comparison, location queries × languages).
+Execute across ChatGPT (search on), Perplexity, Gemini, AI Overviews, Copilot in clean sessions
+with screenshots. Score per engine: coverage, position, sentiment, cited sources — plus the
+same runs for 3–5 competitors.
+B · Citation Source
+Map
+Extract every cited domain/URL; cluster into directories, review platforms, media, community,
+competitor sites. Output: the exact third-party properties the client must be present on → the off-
+site execution backlog.
+C · Technical AI
+Readiness
+robots.txt vs the full bot matrix · Cloudflare AI-bot toggle · noindex leaks · Bing Webmaster Tools
+status (sitemap? indexed?) · server-rendering check · server-log analysis for GPTBot / OAI-
+SearchBot / ClaudeBot / PerplexityBot visits · full JSON-LD inventory.
+--- PAGE 14 ---
+Reverse-EngineeringAI Search GEO / AEO Deep Research
+14
+D · Entity &
+Consensus
+Knowledge Panel? Wikidata QID? Crunchbase claimed? GBP/Bing Places claimed? NAP consistency
+scan across all listings (conflicts = suppressed AI confidence) · review footprint: volume, velocity, rating,
+text content per platform.
+E · Content
+Extractability
+BLUF check · chunk self-containment · question headings · factual density · FAQ coverage vs prompt
+library · freshness dates · query fan-out gap analysis (run priority prompts, record the sub-queries
+engines generate, map against existing content).
+DELIVERABLE
+A scored 100-point report across the five modules + prioritized gap list + 90-day proposal. The audit is
+your sales weapon — the score creates urgency, the gap list creates the retainer.
+3.2 The 30-60-90 Execution Roadmap — Local Business Playbook
+Table 7 — Days 1–30 — Foundation & Access
+Week Workstream Exact tasks
+Week 1 Technical unblocking Fix robots.txt (allow OAI-SearchBot, PerplexityBot, Claude-
+SearchBot, ChatGPT-User) · check Cloudflare/CDN bot rules · Bing
+Webmaster Tools: verify, sitemap, IndexNow · claim Bing Places · fix
+server-side rendering · XML sitemaps
+Week 2 Entity anchoring Complete Google Business Profile (every attribute, 20+ photos,
+weekly posts) + Bing Places · claim Crunchbase, align LinkedIn ·
+create Wikidata entry · entity-home page with full JSON-LD +
+sameAs + knowsAbout · NAP cleanup
+Week 3 Schema & core pages Deploy full schema stack (Section 4 template) · rebuild top 5 money
+pages: BLUF + chunk structure + question headings + stats/quotes +
+visible dates
+Week 4 Directory & review foundation Claim all category directories · launch permanent review acquisition:
+trigger at service completion, direct link, 2–5 new reviews/week,
+respond to 100% · seed review text with service keywords naturally
+Table 8 — Days 31–60 — Content & Citation Engineering
+Workstream Exact tasks
+Cluster deployment Pillar + 15–40 cluster pages covering the fan-out map (costs, comparisons, alternatives,
+neighborhood variants, per language). HeyLead-style: 100+ structured pages — but every
+page needs genuinely unique value, not doorway spam (Google scaled-content abuse
+policy).
+First PR wave One proprietary data story (e.g. "Senior care cost index Bern 2026") → wire syndication +
+Swiss media outreach + trade byline.
+Listicle & directory seeding Get the client into every relevant "best of" list, comparison page and niche directory from the
+Citation Source Map.
+Community presence Genuine participation in relevant subreddits/local forums; expert Quora answers.
+--- PAGE 15 ---
+Reverse-EngineeringAI Search GEO / AEO Deep Research
+15
+Refresh &
+monitor
+Refresh all money pages (30-day freshness cycle begins) · stand up the monitoring dashboard (3.3) ·
+weekly tracking begins.
+Table 9 — Days 61–90 — Compounding & Proof
+Workstream Exact tasks
+PR & content iteration Second PR angle + wire release · two newsjacking moments · close remaining fan-out gaps
+discovered from monitoring data.
+Review doubling-down Focus on the platforms that appear in your category's AI answers (check weekly which
+sources engines actually cite).
+Multilingual wave DE pages live → FR localization with proper hreflang (Section 4).
+ROI report SOV trend per engine · citation count trend · AI-referral traffic (GA4 custom channel for
+chat.openai.com / perplexity.ai / gemini / copilot referrers) · lead attribution. Publish the
+case study — it sells the next ten clients.
+ONGOING RETAINER RHYTHM
+Weekly: monitoring & review responses → Bi-weekly: content refresh → Monthly: new cluster pages +
+reporting → Quarterly: entity/directory expansion + robots.txt review.
+3.3 The Software Architecture Blueprint — Your Own Monitoring Stack
+Replicate 70–80% of Otterly/Peec functionality in-house:
+Prompt Library DB
+Postgres / Airtable
+Execution Layer
+Scheduled Workers
+Parsing & Extraction
+Python + LLM classifier
+Metrics Store
+Time-series
+Dashboard & Reports
+Looker Studio
+Server Logs
+AI bot visits
+GA4
+AI-referral channel
+Execution layer: scheduled workers (n8n / GitHub Actions / Cloud Run, daily or weekly cron) calling OpenAI
+API (web_search tool) → ChatGPT · Perplexity Sonar API → Perplexity · Gemini API (Search grounding) →
+Gemini. Optional headless-browser capture (Playwright) for consumer-UI fidelity. Run each prompt 1–3× per
+engine per cycle.
+Parsing: brand mention (regex + fuzzy match + aliases) · cited URLs/domains normalized · mention position
+· competitor mentions · sentiment via a small LLM classifier call.
+Dashboard & reporting: Looker Studio (free, client-facing) or Streamlit/Retool internal · automated weekly
+white-label reports · alerts on mention lost, sentiment drop, new competitor.
+--- PAGE 16 ---
+Reverse-EngineeringAI Search GEO / AEO Deep Research
+16
+KEY ENGINEERING DECISIONS
+· API vs browser capture: APIs cheap/stable
+but differ from consumer UI; browser capture is
+ground truth but fragile. Best: API daily +
+browser spot-checks weekly.
+· Non-determinism: never report single runs;
+rolling averages over ≥7 daily runs.
+· Cost: 50 prompts × 4 engines × daily ≈ 6,000
+calls/month — trivially cheap. The value is
+parsing + presentation.
+POSITIONING VS THE $29–95/MO TOOLS
+Don't compete as a tool — bundle monitoring
+inside your execution retainer as proof-of-
+work. The dashboard is your retention
+mechanism, not your product. ROI KPIs: SOV
+per engine · mention volume & sentiment ·
+evaluation-stage inclusion ("best/vs/alternatives")
+· AI-referral sessions · AI-attributed leads · cited-
+domain coverage growth.
+Figure 6 — The ROI story — AI-referral visitors convert up to 9× better than Google organic
+04Case Study — "Best Health Center for Elders in Bern"
+Target query family (trilingual): DE "Bestes Altersheim / Pflegeheim in Bern" · FR "Meilleur EMS / centre de
+santé pour seniors à Berne" · EN "Best health center for elders in Bern". Hypothetical client: "Sonnenhof
+Bern" — private senior residence with nursing, dementia and day-care services.
+4.1 How Each Engine Will Build Its Answer
+Table 10 — Per-engine retrieval for the Bern eldercare query — and where Sonnenhof must exist
+Engine What it retrieves for this query Where Sonnenhof must exist
+ChatGPT Bing results + fan-outs ("Pflegeheim Bern
+Bewertungen", "Altersheim Bern Kosten") + Bing
+Places + review aggregations (Facebook, Yelp)
+Bing index · Bing Places · Facebook reviews ·
+directories · DE/FR/EN pages
+--- PAGE 17 ---
+Reverse-EngineeringAI Search GEO / AEO Deep Research
+17
+Gemini /
+AIO
+Google index + Knowledge Graph + GBP data +
+review text + Maps
+Complete GBP · Google reviews · KG entity · top-10
+organic pages
+Perplexity Own index + live crawl of top 10–20 results; local data
+from Maps/Yelp-type sources; ~5–10 sources cited
+Crawlable BLUF pages · comparis/local.ch profiles ·
+fresh content
+Claude Brave Search; prefers deep blog/guide pages,
+listicles, dated content with citations
+Guide-style content ("Choosing a senior residence in
+Bern: costs, care levels, questions to ask")
+Copilot Bing + Bing Places Same as ChatGPT
+MULTILINGUAL MECHANICS
+German AI answers lean on DACH sources; French answers on FR-language sources. DE and FR page
+versions are treated as separate sites by Google — proper hreflang, localized (not machine-translated)
+copy, and per-language directory presence are required. A .ch domain, Swiss hosting and .ch backlinks
+strengthen the geo-signal for all engines.
+4.2 End-to-End Strategy (Mapped to the 30-60-90)
+Phase 1 — Be findable & unambiguous (Days 1–30)
+1 Technical access
+robots.txt + Bing Webmaster Tools + Bing Places (CH categories: "Pflegeheim", "Alters- und
+Pflegezentrum").
+2 GBP mastery
+Primary category Nursing home / Altersheim, every attribute (wheelchair access, dementia care), 20+
+photos, weekly German posts.
+3 Entity stack
+Wikidata entry (instance of: nursing home; location: Bern; official website) + entity-home page with the
+JSON-LD below.
+4 Consensus layer
+NAP cleanup + Swiss directory claims (4.3) + rebuild the 5 core pages per language with BLUF structure
+— e.g. the dementia page opens: "Sonnenhof Bern operates a specialized 28-bed dementia unit with
+24/7 nursing staff, secured gardens and a 1:4 caregiver ratio in Bern-Bümpliz." — a liftable EAV
+sentence.
+{
+  "@context": "https://schema.org",
+  "@type": "NursingHome",
+  "@id": "https://www.sonnenhof-bern.ch/#organization",
+  "name": "Sonnenhof Bern – Alters- und Pflegezentrum",
+  "description": "Private senior residence in Bern offering 120 residential places,
+    24/7 nursing care, specialized dementia units and day-care services since 1998.",
+  "address": { "@type": "PostalAddress", "streetAddress": "Musterstrasse 12",
+    "addressLocality": "Bern", "postalCode": "3007", "addressCountry": "CH" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 46.9480, "longitude": 7.4474 },
+  "telephone": "+41 31 000 00 00",
+  "priceRange": "CHF 6'500 – CHF 12'000 / month",
+--- PAGE 18 ---
+Reverse-EngineeringAI Search GEO / AEO Deep Research
+18
+"sameAs": [
+    "https://www.wikidata.org/wiki/Q000000",
+    "https://www.google.com/maps/place/...",
+    "https://www.local.ch/de/d/...",
+    "https://www.comparis.ch/gesundheit/arzt/...",
+    "https://www.facebook.com/sonnenhofbern",
+    "https://www.linkedin.com/company/sonnenhof-bern"
+  ],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "127" 
+}
+}
+Plus Service schema per offering (residential, dementia, day care, rehabilitation), FAQPage on every service page,
+BreadcrumbList site-wide.
+Phase 2 — Become the consensus answer (Days 31–60)
+5 Content cluster per language
+The fan-out map: Kosten Altersheim Bern / coût EMS Berne · care levels explained · dementia guide ·
+"Altersheim vs. Pflegeheim vs. betreutes Wohnen" · family relocation checklist · neighborhood pages
+(Bümpliz, Kirchenfeld, Breitenrain). Target 30–60 pages/language per quarter, each with unique data.
+6 Proprietary data PR
+"Berner Pflegekosten-Report 2026" — original cost/availability data → Swiss wire (SDA/Keystone) +
+outreach to Berner Zeitung, Bund, 20 Minuten, health trade press. Wire + syndication = the +239%
+citation-lift mechanic.
+7 Review engineering
+Systematic Google + Facebook review flow from families (Facebook reviews feed Bing Places →
+ChatGPT); respond to 100%. Target: 100+ Google reviews at 4.7+, steady 5–10/month velocity, keyword-
+rich text ("dementia", "loving staff") — review text is what AI quotes.
+8 Listicle & directory seeding
+Presence on every "best nursing homes Bern" page · fully completed comparis profile (its ranking
+factors: online booking, profile photo, accepting new patients) · local.ch/search.ch premium profiles.
+Phase 3 — Multilingual dominance & proof (Days 61–90)
+9 Localization
+FR (optionally IT) full localization with hreflang; FR-language PR angle for Romandie media.
+10 Claude-targeted asset
+A genuinely deep, dated, citation-rich guide — "The Complete Guide to Senior Care in Bern (2026):
+Types, Costs, KVG/EL Financing, and How to Choose" — exactly the /blog/ guide format Claude cites.
+11 Monitor & iterate
+Weekly trilingual prompt monitoring (40-prompt library: 15 DE / 15 FR / 10 EN); iterate on whichever
+engine lags; refresh pages every 30 days.
+12 Report & convert
+SOV per engine per language · AI-referral sessions · tour bookings attributed to AI answers.
+--- PAGE 19 ---
+Reverse-EngineeringAI Search GEO / AEO Deep Research
+19
+REALISTIC TIMELINE
+First citations from month ~3 (matches HeyLead's own published expectation and the 4–8 week lag for
+retrieval-based engines); Gemini/AI Overviews depend on organic ranking maturing — 3–6 months in
+lower-competition Swiss local markets.
+4.3 The Swiss / EU Source Ecosystem You Must Cover
+Table 11 — Swiss citation ecosystem checklist
+Category Properties
+Core directories local.ch · search.ch (the two dominant Swiss directories — Bing and Google both ingest them)
+· help.ch
+Healthcare-specific comparis.ch medical directory (40,000+ providers, ranked by objective criteria) · doktor.ch ·
+medicosearch · oneDoc · plus the FOPH (BAG) registry data aggregators pull from
+Reviews Google (primary) · Facebook (feeds Bing Places) · Trustpilot where applicable
+Media / PR Berner Zeitung · Der Bund · 20 Minuten · NZZ · Handelszeitung · Swiss wire distribution
+Community Reddit r/bern, r/Switzerland (expat families ask eldercare questions in English) · English Forum
+Switzerland — high-value for the EN query family
+Registries Zefix (Swiss commercial registry — free entity corroboration) · Crunchbase · LinkedIn
+A Appendix A — Key Benchmarks & Data Points
+Table 12 — Benchmark reference card (all third-party studies; treat as directional)
+Finding Value Source context
+Max visibility lift from GEO methods +40% Princeton / Georgia Tech / IIT Delhi, KDD 2024
+Relative lift from adding source citations
+(mid-ranked pages)
++115% Same study
+Retrieved pages actually cited by
+ChatGPT
+~15% AirOps dataset
+ChatGPT prompts triggering web search
+— overall / local
+31% / 59% AirOps
+AIO citations from top-10 organic pages 93.67% Multiple citation studies
+Citation multiplier: content updated <30
+days
+3.2× ZipTie citation analysis
+FAQ-schema pages citation likelihood 2.8× Same
+Top-3 citation rate: schema vs no
+schema
+47% vs 28% Same
+--- PAGE 20 ---
+Reverse-EngineeringAI Search GEO / AEO Deep Research
+20
+Correlation with AI visibility: brand mentions / backlinks 0.664 / 0.218 Ahrefs, 75k brands
+AI citations from earned (non-paid) sources 95% Muck Rack, 1M+ citations
+Median citation lift from article syndication +239% Stacker × Scrunch, 2026
+Share of LLM citations from the first 30% of a page 44.2% Citation-position studies
+AI-referral conversion: ChatGPT / Claude / Perplexity / Google
+organic
+~15% / 16.8% / 10.5% /
+1.76%
+Referral analytics studies
+B2B sites blocking ≥1 major AI bot 41% Crawler audits 2025–26
+Marketers tracking AI search performance 14% First-mover window still
+open
+B Appendix B — Tooling Stack: Build vs. Buy
+Table 13 — Build vs. buy reference
+Function Buy Build / free alternative
+Multi-engine monitoring Profound ($2k+/mo ent.) · Peec (€89+) ·
+Otterly ($29+)
+API workers + Postgres + Looker Studio
+(Section 3.3)
+Prompt research Profound Prompt Volumes · Otterly Prompt
+Research
+AlsoAsked · AnswerThePublic · manual
+engine probing
+Crawlability / tech audit Otterly Crawlability Checker · Scrunch Manual robots.txt audit · Screaming Frog ·
+Rich Results Test
+AI bot analytics Profound Agent Analytics · Cloudflare AI
+metrics
+Server-log grep for bot user agents (free)
+Entity building — Wikidata · Crunchbase · GBP · Bing Places
+(all free)
+Citation / PR execution Muck Rack · Qwoted · Featured · wire
+services
+Manual outreach + HARO-successors
+AI referral tracking — GA4 custom channel with AI-referrer regex
+(free)
+METHODOLOGY NOTE
+All weightings, percentages and rankings in this report derive from published third-party citation studies
+and reverse-engineering research (AirOps, Ahrefs, Muck Rack, Whitespark, SE Ranking, Princeton GEO-
+bench, and practitioner analyses). No AI vendor publishes its ranking formula; treat every number as
+directional and re-validate quarterly — citation ecosystems shift fast (cf. Reddit's 60% → 10% citation
+swing in two weeks).
+--- PAGE 21 ---
+Reverse-EngineeringAI Search GEO / AEO Deep Research
+21
+References
+1. Aggarwal, P., et al. (2024). GEO: Generative Engine Optimization. KDD 2024. arxiv.org/pdf/2311.09735
+2. HeyLead.ai — product & service pages. heylead.ai
+3. Peec.ai — platform documentation. peec.ai
+4. Otterly.ai — feature documentation. otterly.ai
+5. Profound — platform & funding coverage. tryprofound.com; vismore.ai/blog/profound-review
+6. AirOps — How ChatGPT decides which sources to cite. airops.com
+7. Viserx — How ChatGPT actually picks sources. viserx.com
+8. ZipTie — How does ChatGPT choose its sources; How Perplexity AI answers work. ziptie.dev
+9. Ahrefs — Query fan-out; AI visibility correlation studies. ahrefs.com/blog
+10. Demand Local — Digital PR & GEO campaigns (Muck Rack / Stacker × Scrunch data). demandlocal.com
+11. Whitespark — ChatGPT local ranking & review-source research. whitespark.ca
+12. Capston AI — robots.txt for AI bots. capston.ai
+13. Pixis — robots.txt for AI crawlers & GEO audit. pixis.ai
+14. Digital Applied — Entity SEO & Knowledge Graph optimization guide 2026. digitalapplied.com
+15. Ranqo — Entity SEO, Knowledge Graph & AI visibility. ranqo.ai
+16. QuickSEO / SE Ranking — llms.txt effectiveness studies. quickseo.ai
+17. Comparis — Swiss medical directory documentation. en.comparis.ch
+18. Webpulse — Claude citation behavior study (2,170 URLs). webpulsehq.com
+19. AI Due — AI SEO for Swiss SMEs & local strategy. ai-due.com
+20. Aurora Intelligence — Multi-language GEO across markets. aurora-intelligence.tech
+21. SEO Windy City — Local reputation for ChatGPT visibility (Bing Places mechanics). seowindycity.com
+22. E2M Solutions — Local SEO playbook for agencies. e2msolutions.com
+23. AI Thinker Lab — Generative Engine Optimization 2026 benchmarks. aithinkerlab.com
+24. Evertune — Top GEO platforms 2026. evertune.ai
+25. Conductor — Query fan-out academy. conductor.com

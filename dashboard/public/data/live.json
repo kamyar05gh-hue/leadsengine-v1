@@ -1,0 +1,261 @@
+{
+  "SYSTEM": {
+    "dataMode": "LIVE",
+    "promptsInLibrary": 24
+  },
+  "CLIENTS": {
+    "sonnenhof": {
+      "ENGINE_STATS_LIVE": [
+        {
+          "id": "chatgpt",
+          "name": "ChatGPT",
+          "citations": 5,
+          "used": 18,
+          "rate": 19.4,
+          "sov": 32.5,
+          "sentiment": 0
+        },
+        {
+          "id": "gemini",
+          "name": "Gemini",
+          "citations": 0,
+          "used": 36,
+          "rate": 0.0,
+          "sov": 60.0,
+          "sentiment": 0
+        },
+        {
+          "id": "claude",
+          "name": "Claude",
+          "citations": 1,
+          "used": 6,
+          "rate": 16.7,
+          "sov": 33.3,
+          "sentiment": 0
+        }
+      ],
+      "VISIBILITY": 19,
+      "CITATIONS_30D": 6,
+      "CITATION_TREND_LIVE": [
+        {
+          "date": "2026-08-01",
+          "chatgpt": 22.2,
+          "gemini": 0.0
+        },
+        {
+          "date": "2026-08-02",
+          "chatgpt": 16.7,
+          "gemini": 0.0,
+          "claude": 16.7
+        }
+      ],
+      "ACTIVITY_LIVE": [
+        {
+          "color": "#3ECF8E",
+          "text": "Sonnenhof Bern cited by Claude",
+          "time": "2026-08-02 09:50"
+        },
+        {
+          "color": "#5B8DEF",
+          "text": "Sonnenhof Bern mentioned by Gemini",
+          "time": "2026-08-02 09:49"
+        },
+        {
+          "color": "#3ECF8E",
+          "text": "Sonnenhof Bern cited by ChatGPT",
+          "time": "2026-08-02 09:48"
+        },
+        {
+          "color": "#5B8DEF",
+          "text": "Sonnenhof Bern mentioned by Gemini",
+          "time": "2026-08-01 20:43"
+        },
+        {
+          "color": "#5B8DEF",
+          "text": "Sonnenhof Bern mentioned by Gemini",
+          "time": "2026-08-01 20:42"
+        },
+        {
+          "color": "#3ECF8E",
+          "text": "Sonnenhof Bern cited by ChatGPT",
+          "time": "2026-08-01 20:42"
+        },
+        {
+          "color": "#3ECF8E",
+          "text": "Sonnenhof Bern cited by ChatGPT",
+          "time": "2026-08-01 20:41"
+        },
+        {
+          "color": "#5B8DEF",
+          "text": "Sonnenhof Bern mentioned by Gemini",
+          "time": "2026-08-01 20:20"
+        }
+      ],
+      "ALERTS_LIVE": [],
+      "COMPETITORS_LIVE": [
+        {
+          "brand": "Sonnenhof Bern",
+          "is_client": true,
+          "mention_rate": 23.3,
+          "mentions": 14
+        },
+        {
+          "brand": "Altersheim Matte",
+          "is_client": false,
+          "mention_rate": 0.0,
+          "mentions": 0
+        },
+        {
+          "brand": "Kursana",
+          "is_client": false,
+          "mention_rate": 0.0,
+          "mentions": 0
+        },
+        {
+          "brand": "Tertianum",
+          "is_client": false,
+          "mention_rate": 13.3,
+          "mentions": 8
+        },
+        {
+          "brand": "Senectere",
+          "is_client": false,
+          "mention_rate": 0.0,
+          "mentions": 0
+        }
+      ],
+      "AI_VISIBILITY_LIVE": {
+        "domain_hit_rate": 0.0,
+        "avg_unique_domains": 6.4,
+        "queries_checked": 5
+      }
+    },
+    "futuremedia": {
+      "ENGINE_STATS_LIVE": [
+        {
+          "id": "chatgpt",
+          "name": "ChatGPT",
+          "citations": 3,
+          "used": 18,
+          "rate": 12.5,
+          "sov": 47.6,
+          "sentiment": 0
+        },
+        {
+          "id": "gemini",
+          "name": "Gemini",
+          "citations": 0,
+          "used": 18,
+          "rate": 0.0,
+          "sov": 48.7,
+          "sentiment": 0
+        },
+        {
+          "id": "claude",
+          "name": "Claude",
+          "citations": 0,
+          "used": 8,
+          "rate": 0.0,
+          "sov": 50.0,
+          "sentiment": 0
+        }
+      ],
+      "VISIBILITY": 7,
+      "CITATIONS_30D": 3,
+      "CITATION_TREND_LIVE": [
+        {
+          "date": "2026-08-01",
+          "chatgpt": 8.3,
+          "gemini": 0.0
+        },
+        {
+          "date": "2026-08-02",
+          "chatgpt": 16.7,
+          "gemini": 0.0,
+          "claude": 0.0
+        }
+      ],
+      "ACTIVITY_LIVE": [
+        {
+          "color": "#5B8DEF",
+          "text": "Future Media mentioned by Claude",
+          "time": "2026-08-02 09:52"
+        },
+        {
+          "color": "#5B8DEF",
+          "text": "Future Media mentioned by Claude",
+          "time": "2026-08-02 09:52"
+        },
+        {
+          "color": "#5B8DEF",
+          "text": "Future Media mentioned by Gemini",
+          "time": "2026-08-02 09:52"
+        },
+        {
+          "color": "#5B8DEF",
+          "text": "Future Media mentioned by Gemini",
+          "time": "2026-08-02 09:51"
+        },
+        {
+          "color": "#5B8DEF",
+          "text": "Future Media mentioned by ChatGPT",
+          "time": "2026-08-02 09:51"
+        },
+        {
+          "color": "#3ECF8E",
+          "text": "Future Media cited by ChatGPT",
+          "time": "2026-08-02 09:51"
+        },
+        {
+          "color": "#5B8DEF",
+          "text": "Future Media mentioned by Gemini",
+          "time": "2026-08-01 20:44"
+        },
+        {
+          "color": "#5B8DEF",
+          "text": "Future Media mentioned by Gemini",
+          "time": "2026-08-01 20:44"
+        }
+      ],
+      "ALERTS_LIVE": [],
+      "COMPETITORS_LIVE": [
+        {
+          "brand": "Future Media",
+          "is_client": true,
+          "mention_rate": 31.8,
+          "mentions": 14
+        },
+        {
+          "brand": "Ringier",
+          "is_client": false,
+          "mention_rate": 0.0,
+          "mentions": 0
+        },
+        {
+          "brand": "TX Group",
+          "is_client": false,
+          "mention_rate": 0.0,
+          "mentions": 0
+        },
+        {
+          "brand": "CH Media",
+          "is_client": false,
+          "mention_rate": 4.5,
+          "mentions": 2
+        },
+        {
+          "brand": "Goldbach",
+          "is_client": false,
+          "mention_rate": 18.2,
+          "mentions": 8
+        }
+      ],
+      "AI_VISIBILITY_LIVE": {
+        "domain_hit_rate": 40.0,
+        "avg_unique_domains": 8.2,
+        "queries_checked": 5
+      }
+    }
+  },
+  "UPDATED": "09:53 UTC"
+}

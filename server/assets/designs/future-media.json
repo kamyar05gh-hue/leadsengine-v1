@@ -1,0 +1,468 @@
+{
+  "tokens": {
+    "colors": {
+      "primary": "#B4A5FF",
+      "secondary": "#0D0B18",
+      "background": "#000000",
+      "text": "#FFFFFF",
+      "accent": "#8A7BE8"
+    },
+    "typography": {
+      "headingFont": "Plus Jakarta Sans, sans-serif",
+      "bodyFont": "Inter, sans-serif",
+      "headingSizes": {
+        "h1": "72px",
+        "h2": "48px",
+        "h3": "24px"
+      },
+      "bodySize": "16px",
+      "lineHeight": "1.5"
+    },
+    "spacing": {
+      "sectionPadding": "120px",
+      "containerMaxWidth": "1200px",
+      "gridGap": "24px"
+    },
+    "components": {
+      "buttonStyle": "Pill-shaped (rounded-full) with high contrast. Primary buttons have a solid light purple background with dark text. Secondary buttons are outlined or have a dark semi-transparent background with white text.",
+      "cardStyle": "Dark indigo-black background (#0D0B18) with a very subtle, thin border, rounded corners (approx. 16px), and generous inner padding.",
+      "headerStyle": "Fixed/sticky, transparent background with a height of approximately 80px, featuring centered navigation links and an outlined CTA button on the right.",
+      "inputStyle": "Dark background with a thin white/gray border, rectangular with slightly rounded corners, and white placeholder/input text."
+    },
+    "layout": {
+      "heroStructure": "Split or centered layout with a large background image or dark background featuring glowing purple radial gradients, bold typography with highlighted purple accent words, subtext, and dual CTA buttons.",
+      "sectionOrder": [
+        "hero",
+        "clientLogos",
+        "valueProposition",
+        "caseStudies",
+        "testimonials",
+        "faq",
+        "contact",
+        "footer"
+      ],
+      "navigationStyle": "Horizontal inline menu with centered text links, featuring a purple active state indicator, flanked by a logo on the left and a pill-shaped outlined CTA button on the right."
+    }
+  },
+  "structure": {
+    "navLinks": [
+      {
+        "label": "Home",
+        "href": "https://www.future-media.ch/"
+      },
+      {
+        "label": "Leads",
+        "href": "https://www.future-media.ch/leads"
+      },
+      {
+        "label": "Mitarbeitende",
+        "href": "https://www.future-media.ch/mitarbeitende"
+      },
+      {
+        "label": "Brand Awareness",
+        "href": "https://www.future-media.ch/brandawareness"
+      },
+      {
+        "label": "Case Study&#x27;s",
+        "href": "https://www.future-media.ch/"
+      },
+      {
+        "label": "Workshop",
+        "href": "https://www.future-media.ch/kurse"
+      },
+      {
+        "label": "Team",
+        "href": "https://www.future-media.ch/team"
+      },
+      {
+        "label": "Kontakt",
+        "href": "https://www.future-media.ch/"
+      }
+    ],
+    "ctaText": "Kostenlose Beratung",
+    "logoText": "Home",
+    "footerColumns": [
+      {
+        "heading": "",
+        "links": [
+          {
+            "label": "Impressum",
+            "href": "https://www.future-media.ch/impressum"
+          },
+          {
+            "label": "Datenschutzerkl&auml;rung",
+            "href": "https://www.future-media.ch/datenschutz"
+          },
+          {
+            "label": "AGB&#39;s",
+            "href": "https://www.future-media.ch/agb"
+          }
+        ]
+      }
+    ],
+    "sectionOrder": [
+      "Social Media, das",
+      "liefert. Punkt.",
+      "200+&nbsp;",
+      "5.0",
+      "Die meisten Marketingbudgets werden verschwendet .",
+      "W&auml;hle Deinen Weg.",
+      ".",
+      ".",
+      "Ergebnisse in 90 Tagen oder Du zahlst nicht",
+      "."
+    ],
+    "homeDescription": "Die Future Media GmbH ist Deine Social Media Agentur für ganzheitliches Social Media - und Online Marketing. Wir verbinden Branding, Brand Awareness, Leadgenerierung und Mitarbeitergewinnung (Recruiting) zu einer klaren Strategie für mehr Reichweite und Wachstum. Als TikTok Agentur nutzen wir organische Reichweite, TikTok Ads, Instagram Ads und Facebook Ads. Ergänzt durch Social Media Workshops erhältst Du alles aus einer Hand. Sichere Dir jetzt Deine kostenlose Ersteinschätzung."
+  },
+  "rendered": {
+    "pageBackground": "rgb(0, 0, 0)",
+    "elements": {
+      "body": {
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "fontSize": "10px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(0, 0, 0)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "textTransform": "none",
+        "padding": "0px",
+        "lineHeight": "normal",
+        "textAlign": "start"
+      },
+      "h1": null,
+      "h2": {
+        "fontFamily": "raleway, sans-serif",
+        "fontSize": "130px",
+        "fontWeight": "700",
+        "letterSpacing": "normal",
+        "color": "rgb(27, 27, 30)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "textTransform": "none",
+        "padding": "0px",
+        "lineHeight": "130px",
+        "textAlign": "start"
+      },
+      "h3": {
+        "fontFamily": "poppins-v2",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "textTransform": "none",
+        "padding": "0px",
+        "lineHeight": "19.6px",
+        "textAlign": "start"
+      },
+      "p": {
+        "fontFamily": "poppins-v2, sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(27, 27, 30)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "textTransform": "none",
+        "padding": "0px",
+        "lineHeight": "19.6px",
+        "textAlign": "start"
+      },
+      "a": {
+        "fontFamily": "poppins-v2, sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(0, 0, 238)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "textTransform": "none",
+        "padding": "0px",
+        "lineHeight": "19.6px",
+        "textAlign": "center"
+      },
+      "nav": {
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "fontSize": "10px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(0, 0, 0)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "textTransform": "none",
+        "padding": "0px",
+        "lineHeight": "normal",
+        "textAlign": "start"
+      },
+      "footer": {
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "fontSize": "10px",
+        "fontWeight": "400",
+        "letterSpacing": "normal",
+        "color": "rgb(0, 0, 0)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "textTransform": "none",
+        "padding": "0px",
+        "lineHeight": "normal",
+        "textAlign": "start"
+      }
+    },
+    "bgPalette": [
+      {
+        "color": "rgb(0, 0, 0)",
+        "area": 8401934
+      },
+      {
+        "color": "rgba(38, 33, 92, 0.15)",
+        "area": 5607035
+      },
+      {
+        "color": "rgb(255, 255, 255)",
+        "area": 228488
+      },
+      {
+        "color": "rgb(38, 33, 92)",
+        "area": 220800
+      },
+      {
+        "color": "rgba(0, 0, 0, 0.25)",
+        "area": 153906
+      },
+      {
+        "color": "rgba(127, 119, 221, 0.15)",
+        "area": 62775
+      },
+      {
+        "color": "rgb(206, 203, 246)",
+        "area": 22177
+      },
+      {
+        "color": "rgb(27, 27, 30)",
+        "area": 18503
+      },
+      {
+        "color": "rgba(0, 0, 0, 0.5)",
+        "area": 4572
+      }
+    ],
+    "textPalette": [
+      {
+        "color": "rgb(255, 255, 255)",
+        "area": 1165500
+      },
+      {
+        "color": "rgb(206, 203, 246)",
+        "area": 186129
+      },
+      {
+        "color": "rgb(166, 166, 172)",
+        "area": 77763
+      },
+      {
+        "color": "rgb(253, 252, 245)",
+        "area": 71128
+      },
+      {
+        "color": "rgb(250, 250, 250)",
+        "area": 59989
+      },
+      {
+        "color": "rgb(204, 204, 204)",
+        "area": 50072
+      },
+      {
+        "color": "rgb(0, 0, 0)",
+        "area": 15519
+      },
+      {
+        "color": "rgb(252, 246, 240)",
+        "area": 7581
+      },
+      {
+        "color": "rgb(127, 119, 221)",
+        "area": 7163
+      },
+      {
+        "color": "rgb(93, 202, 165)",
+        "area": 6671
+      },
+      {
+        "color": "rgb(226, 75, 74)",
+        "area": 2709
+      },
+      {
+        "color": "rgb(27, 27, 30)",
+        "area": 1948
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Kostenlose Beratung",
+        "href": "https://calendly.com/future-media-gmbh/kostenlose-erstberatung",
+        "background": "transparent",
+        "textColor": "rgb(250, 250, 250)",
+        "border": "1px solid rgb(250, 250, 250)",
+        "borderRadius": "20px",
+        "fontFamily": "poppins-v2, sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "500",
+        "letterSpacing": "normal",
+        "textTransform": "none",
+        "height": 38,
+        "inHeader": true
+      },
+      {
+        "text": "Kontaktiere uns",
+        "href": "https://calendly.com/future-media-gmbh/kostenlose-erstberatung",
+        "background": "rgb(206, 203, 246)",
+        "textColor": "rgb(0, 0, 0)",
+        "border": "0px solid rgb(250, 250, 250)",
+        "borderRadius": "20px",
+        "fontFamily": "poppins-v2, sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "letterSpacing": "normal",
+        "textTransform": "none",
+        "height": 38,
+        "inHeader": false
+      },
+      {
+        "text": "Lerne uns besser kennen",
+        "href": "https://www.future-media.ch/team",
+        "background": "rgb(27, 27, 30)",
+        "textColor": "rgb(250, 250, 250)",
+        "border": "1px solid rgb(60, 60, 78)",
+        "borderRadius": "20px",
+        "fontFamily": "poppins-v2, sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "letterSpacing": "normal",
+        "textTransform": "none",
+        "height": 43,
+        "inHeader": false
+      },
+      {
+        "text": "Mehr erfahren",
+        "href": "https://www.future-media.ch/kurse",
+        "background": "rgb(206, 203, 246)",
+        "textColor": "rgb(27, 27, 30)",
+        "border": "1px solid rgb(124, 100, 80)",
+        "borderRadius": "20px",
+        "fontFamily": "poppins-v2, sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "letterSpacing": "normal",
+        "textTransform": "none",
+        "height": 43,
+        "inHeader": false
+      },
+      {
+        "text": "Einreichen",
+        "href": null,
+        "background": "transparent",
+        "textColor": "rgb(250, 250, 250)",
+        "border": "1px solid rgb(250, 250, 250)",
+        "borderRadius": "20px",
+        "fontFamily": "poppins-v2, sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "letterSpacing": "normal",
+        "textTransform": "none",
+        "height": 35,
+        "inHeader": false
+      }
+    ],
+    "logo": {
+      "src": "https://static.wixstatic.com/media/b8f8e8_08c843d3f8ee49b392f9ff86619fafde~mv2.png/v1/crop/x_0,y_413,w_1080,h_254/fill/w_233,h_38,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Design%20ohne%20Titel%20(3).png",
+      "alt": "Design ohne Titel (3).png",
+      "width": 233,
+      "height": 38
+    },
+    "sectionBackgrounds": [
+      "rgb(0, 0, 0)",
+      "rgb(0, 0, 0)",
+      "rgb(0, 0, 0)",
+      "rgb(0, 0, 0)",
+      "rgb(0, 0, 0)",
+      "rgb(0, 0, 0)"
+    ],
+    "fontsLoaded": [
+      "poppins-v2 700",
+      "poppins-v2 500",
+      "poppins-v2 300",
+      "poppins-v2 400",
+      "raleway 700",
+      "raleway 400",
+      "open sans 400"
+    ],
+    "siteTitle": "Future Media GmbH - Schweizer Social Media Agentur | Recruting | Leads | Brand Awareness | Online Marketing",
+    "metaDescription": "Die Future Media GmbH ist Deine Social Media Agentur für ganzheitliches Social Media - und Online Marketing. Wir verbinden Branding, Brand Awareness, Leadgenerierung und Mitarbeitergewinnung (Recruiting) zu einer klaren Strategie für mehr Reichweite und Wachstum. Als TikTok Agentur nutzen wir organische Reichweite, TikTok Ads, Instagram Ads und Facebook Ads. Ergänzt durch Social Media Workshops erhältst Du alles aus einer Hand. Sichere Dir jetzt Deine kostenlose Ersteinschätzung.\n",
+    "navLabels": [
+      "Home",
+      "Leads",
+      "Mitarbeitende",
+      "Brand Awareness",
+      "Case Study's",
+      "Workshop",
+      "Team",
+      "Kontakt",
+      "Kostenlose Beratung"
+    ],
+    "url": "https://www.future-media.ch",
+    "extractedAt": "2026-08-11T21:33:36.201Z",
+    "headingFont": "raleway",
+    "headingFontStack": "raleway, sans-serif",
+    "bodyFont": "poppins-v2",
+    "bodyFontStack": "poppins-v2, sans-serif",
+    "primaryButton": {
+      "text": "Kontaktiere uns",
+      "href": "https://calendly.com/future-media-gmbh/kostenlose-erstberatung",
+      "background": "rgb(206, 203, 246)",
+      "textColor": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(250, 250, 250)",
+      "borderRadius": "20px",
+      "fontFamily": "poppins-v2, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "height": 38,
+      "inHeader": false
+    },
+    "ghostButton": {
+      "text": "Kostenlose Beratung",
+      "href": "https://calendly.com/future-media-gmbh/kostenlose-erstberatung",
+      "background": "transparent",
+      "textColor": "rgb(250, 250, 250)",
+      "border": "1px solid rgb(250, 250, 250)",
+      "borderRadius": "20px",
+      "fontFamily": "poppins-v2, sans-serif",
+      "fontSize": "13px",
+      "fontWeight": "500",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "height": 38,
+      "inHeader": true
+    },
+    "headerButton": {
+      "text": "Kostenlose Beratung",
+      "href": "https://calendly.com/future-media-gmbh/kostenlose-erstberatung",
+      "background": "transparent",
+      "textColor": "rgb(250, 250, 250)",
+      "border": "1px solid rgb(250, 250, 250)",
+      "borderRadius": "20px",
+      "fontFamily": "poppins-v2, sans-serif",
+      "fontSize": "13px",
+      "fontWeight": "500",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "height": 38,
+      "inHeader": true
+    }
+  },
+  "visionNotes": "### Visual Design System\n\n#### 1. Layout Structure\n*   **Header:** Sticky, transparent bar. Left-aligned logo, centered text navigation, and a right-aligned pill-shaped CTA button.\n*   **Hero:** Full-bleed background video/imagery with a dark overlay. Left-aligned typography, a thin horizontal divider line, and bottom-left trust metrics.\n*   **Content Sections:** Centered max-width containers. Features structured bento-grid layouts, rounded cards, and horizontal testimonial carousels.\n*   **Footer:** Multi-column layout on a dark background. Left side hosts a clean contact form; right side features structured text links.\n\n#### 2. Spacing Rhythm\n*   Generous vertical breathing room between major sections.\n*   Spacious, comfortable padding inside cards and form fields, preventing visual crowding.\n\n#### 3. Imagery & Graphic Style\n*   **Visuals:** Authentic, human-centric photography and video loops with dark, moody overlays.\n*   **Glows & Gradients:** Subtle, soft purple radial glows behind floating metric cards to create depth.\n*   **Borders & Corners:** Thin, low-contrast borders on cards and input fields. Generous corner radii on all cards and pill-shaped buttons.\n*   **Floating Widget:** A persistent, circular purple action widget in the bottom-right corner.\n\n#### 4. Typography Feel\n*   Clean, modern sans-serif. \n*   **Headings:** Large, bold, sentence-case. Features a signature detail: the final word or key phrase is highlighted in a contrasting light purple.\n*   **Body:** Highly legible, medium-to-light weight, left-aligned.\n\n#### 5. Tone\n*   Premium, dark-mode, professional, and results-oriented, balanced by warm, humanizing photography.\n\n#### 6. DO / DON'T Rules\n*   **DO** highlight the final word or key phrase of main headings in light purple.\n*   **DO** use pill-shaped buttons with generous horizontal padding.\n*   **DO** place a thin, light horizontal divider line directly above hero trust metrics.\n*   **DO** apply soft, purple radial glows behind floating card elements to establish visual hierarchy.\n*   **DO** use thin, low-contrast borders for cards and form inputs.\n*   **DON'T** use sharp 90-degree corners on cards, buttons, or input fields.\n*   **DON'T** use solid, bright background colors; keep the entire page strictly dark-mode.",
+  "masterPrompt": "MASTER STYLE PROMPT — Future Media (https://www.future-media.ch)\nGenerated pages MUST be visually indistinguishable from this site. Facts below are MEASURED from the rendered live site (computed styles); they OVERRIDE any conflicting guess, including the vision notes at the end.\n\n== MEASURED HARD FACTS (computed styles from the rendered DOM) ==\n- Page background: #000000\n- Background palette (ranked by painted area): #000000, #26215c (alpha 0.15), #ffffff, #26215c, #000000 (alpha 0.25), #7f77dd (alpha 0.15), #cecbf6, #1b1b1e\n- Text palette (ranked by painted area): #ffffff, #cecbf6, #a6a6ac, #fdfcf5, #fafafa, #cccccc, #000000, #fcf6f0\n- Heading font stack: raleway, sans-serif\n- Body font stack: poppins-v2, sans-serif\n- H2: raleway 700, 130px/130px, color #1b1b1e, letter-spacing normal, text-transform none\n- H3: poppins-v2 700, 14px/19.6px, color #ffffff, letter-spacing normal, text-transform none\n- Paragraph: poppins-v2 400, 14px/19.6px, color #1b1b1e, letter-spacing normal, text-transform none\n- Link: poppins-v2 400, 14px/19.6px, color #0000ee, letter-spacing normal, text-transform none\nBUTTON STYLES (copy exactly — radius, colors, font):\n- PRIMARY button (filled): background #cecbf6, text #000000, border 0px solid #fafafa, radius 20px, font poppins-v2 500 14px, text-transform none, height ~38px (e.g. \"Kontaktiere uns\")\n- GHOST button (outlined): background transparent, text #fafafa, border 1px solid #fafafa, radius 20px, font poppins-v2 500 13px, text-transform none, height ~38px (e.g. \"Kostenlose Beratung\")\n- HEADER CTA button: background transparent, text #fafafa, border 1px solid #fafafa, radius 20px, font poppins-v2 500 13px, text-transform none, height ~38px (e.g. \"Kostenlose Beratung\")\n- Section background bands top→bottom: #000000 → #000000 → #000000 → #000000 → #000000 → #000000\n- Logo image URL: https://static.wixstatic.com/media/b8f8e8_08c843d3f8ee49b392f9ff86619fafde~mv2.png/v1/crop/x_0,y_413,w_1080,h_254/fill/w_233,h_38,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Design%20ohne%20Titel%20(3).png (233x38, alt \"Design ohne Titel (3).png\")\n- Loaded font faces: poppins-v2 700, poppins-v2 500, poppins-v2 300, poppins-v2 400, raleway 700, raleway 400, open sans 400\n\n== VISION NOTES (layout structure, spacing rhythm, imagery, tone — from screenshots) ==\n### Visual Design System\n\n#### 1. Layout Structure\n*   **Header:** Sticky, transparent bar. Left-aligned logo, centered text navigation, and a right-aligned pill-shaped CTA button.\n*   **Hero:** Full-bleed background video/imagery with a dark overlay. Left-aligned typography, a thin horizontal divider line, and bottom-left trust metrics.\n*   **Content Sections:** Centered max-width containers. Features structured bento-grid layouts, rounded cards, and horizontal testimonial carousels.\n*   **Footer:** Multi-column layout on a dark background. Left side hosts a clean contact form; right side features structured text links.\n\n#### 2. Spacing Rhythm\n*   Generous vertical breathing room between major sections.\n*   Spacious, comfortable padding inside cards and form fields, preventing visual crowding.\n\n#### 3. Imagery & Graphic Style\n*   **Visuals:** Authentic, human-centric photography and video loops with dark, moody overlays.\n*   **Glows & Gradients:** Subtle, soft purple radial glows behind floating metric cards to create depth.\n*   **Borders & Corners:** Thin, low-contrast borders on cards and input fields. Generous corner radii on all cards and pill-shaped buttons.\n*   **Floating Widget:** A persistent, circular purple action widget in the bottom-right corner.\n\n#### 4. Typography Feel\n*   Clean, modern sans-serif. \n*   **Headings:** Large, bold, sentence-case. Features a signature detail: the final word or key phrase is highlighted in a contrasting light purple.\n*   **Body:** Highly legible, medium-to-light weight, left-aligned.\n\n#### 5. Tone\n*   Premium, dark-mode, professional, and results-oriented, balanced by warm, humanizing photography.\n\n#### 6. DO / DON'T Rules\n*   **DO** highlight the final word or key phrase of main headings in light purple.\n*   **DO** use pill-shaped buttons with generous horizontal padding.\n*   **DO** place a thin, light horizontal divider line directly above hero trust metrics.\n*   **DO** apply soft, purple radial glows behind floating card elements to establish visual hierarchy.\n*   **DO** use thin, low-contrast borders for cards and form inputs.\n*   **DON'T** use sharp 90-degree corners on cards, buttons, or input fields.\n*   **DON'T** use solid, bright background colors; keep the entire page strictly dark-mode.\n\n== NON-NEGOTIABLE RULES ==\n- Use ONLY colors from the measured palettes above; never invent new brand colors.\n- Use the exact measured font families (with sensible web fallbacks) and the measured button radius/colors.\n- Match the site's heading case and weight exactly; keep the measured section background rhythm.\n- DO NOT invent navigation menus, stock imagery, or components that do not exist on the real site."
+}

@@ -1,0 +1,152 @@
+{
+  "domain": "futuremediafmc.com",
+  "brand": "Future Media",
+  "robots": {
+    "reachable": true,
+    "status": 200,
+    "bots": {
+      "OAI-SearchBot": {
+        "role": "OpenAI retrieval",
+        "weight": "critical",
+        "state": "not mentioned (inherits *)"
+      },
+      "ChatGPT-User": {
+        "role": "OpenAI live fetch",
+        "weight": "high",
+        "state": "not mentioned (inherits *)"
+      },
+      "PerplexityBot": {
+        "role": "Perplexity retrieval",
+        "weight": "critical",
+        "state": "not mentioned (inherits *)"
+      },
+      "Claude-SearchBot": {
+        "role": "Claude retrieval",
+        "weight": "high",
+        "state": "not mentioned (inherits *)"
+      },
+      "ClaudeBot": {
+        "role": "Anthropic training",
+        "weight": "optional",
+        "state": "not mentioned (inherits *)"
+      },
+      "GPTBot": {
+        "role": "OpenAI training",
+        "weight": "optional",
+        "state": "not mentioned (inherits *)"
+      },
+      "Google-Extended": {
+        "role": "Gemini training token",
+        "weight": "optional",
+        "state": "not mentioned (inherits *)"
+      },
+      "Applebot-Extended": {
+        "role": "Apple training token",
+        "weight": "optional",
+        "state": "not mentioned (inherits *)"
+      }
+    },
+    "sitemap_referenced": false,
+    "findings": [
+      "no Sitemap: reference in robots.txt"
+    ]
+  },
+  "schema": {
+    "reachable": true,
+    "types": [
+      "Organization",
+      "WebSite",
+      "AboutPage"
+    ],
+    "sameAs": [
+      "https://plus.google.com/u/1/104698490384543382076",
+      "https://www.youtube.com/playlist?list=PL6C9BB48BFA81E943"
+    ],
+    "server_rendered": true,
+    "llms_txt": false,
+    "findings": [
+      "no FAQPage schema \u2014 FAQ pages are ~2.8\u00d7 more likely to be cited"
+    ]
+  },
+  "entity": {
+    "brand": "Future Media",
+    "wikidata": [
+      {
+        "qid": "Q5510716",
+        "label": "Future Media Architects",
+        "desc": "internet development company"
+      },
+      {
+        "qid": "Q120522759",
+        "label": "Future Media Framing: Analysis on the Modular Structure of Platform Media",
+        "desc": "scholarly article in Journal of Lanzhou University (Social Sciences), no. 2, 2020"
+      }
+    ],
+    "findings": [
+      "Wikidata entity found"
+    ]
+  },
+  "source_map": {
+    "query": "best digital media agency",
+    "domains": [
+      {
+        "domain": "vaynermedia.com",
+        "hits": 1
+      },
+      {
+        "domain": "trekronormedia.se",
+        "hits": 1
+      },
+      {
+        "domain": "www.wolfgangdigital.com",
+        "hits": 1
+      },
+      {
+        "domain": "collectivemedia.digital",
+        "hits": 1
+      },
+      {
+        "domain": "npdigital.com",
+        "hits": 1
+      },
+      {
+        "domain": "www.thecharlesgrp.com",
+        "hits": 1
+      },
+      {
+        "domain": "vantagemedia.digital",
+        "hits": 1
+      },
+      {
+        "domain": "www.gartner.com",
+        "hits": 1
+      },
+      {
+        "domain": "influence.digital",
+        "hits": 1
+      },
+      {
+        "domain": "mediaeverse.com",
+        "hits": 1
+      },
+      {
+        "domain": "www.jivesmedia.com",
+        "hits": 1
+      },
+      {
+        "domain": "thriveagency.com",
+        "hits": 1
+      }
+    ],
+    "findings": [
+      "12 unique domains surface for this query \u2014 these are the off-site properties to be present on"
+    ]
+  },
+  "scores": {
+    "technical": 25,
+    "schema": 20,
+    "entity": 25,
+    "source_map": 15,
+    "total": 85
+  }
+}

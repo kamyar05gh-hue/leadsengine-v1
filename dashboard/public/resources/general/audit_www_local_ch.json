@@ -1,0 +1,128 @@
+{
+  "domain": "www.local.ch",
+  "brand": "local.ch",
+  "robots": {
+    "reachable": true,
+    "status": 200,
+    "bots": {
+      "OAI-SearchBot": {
+        "role": "OpenAI retrieval",
+        "weight": "critical",
+        "state": "not mentioned (inherits *)"
+      },
+      "ChatGPT-User": {
+        "role": "OpenAI live fetch",
+        "weight": "high",
+        "state": "not mentioned (inherits *)"
+      },
+      "PerplexityBot": {
+        "role": "Perplexity retrieval",
+        "weight": "critical",
+        "state": "not mentioned (inherits *)"
+      },
+      "Claude-SearchBot": {
+        "role": "Claude retrieval",
+        "weight": "high",
+        "state": "not mentioned (inherits *)"
+      },
+      "ClaudeBot": {
+        "role": "Anthropic training",
+        "weight": "optional",
+        "state": "not mentioned (inherits *)"
+      },
+      "GPTBot": {
+        "role": "OpenAI training",
+        "weight": "optional",
+        "state": "not mentioned (inherits *)"
+      },
+      "Google-Extended": {
+        "role": "Gemini training token",
+        "weight": "optional",
+        "state": "not mentioned (inherits *)"
+      },
+      "Applebot-Extended": {
+        "role": "Apple training token",
+        "weight": "optional",
+        "state": "not mentioned (inherits *)"
+      }
+    },
+    "sitemap_referenced": true,
+    "findings": [
+      "all retrieval bots allowed \u2014 good"
+    ]
+  },
+  "schema": {
+    "reachable": true,
+    "types": [
+      "WebSite"
+    ],
+    "sameAs": [],
+    "server_rendered": true,
+    "llms_txt": false,
+    "findings": [
+      "no FAQPage schema \u2014 FAQ pages are ~2.8\u00d7 more likely to be cited",
+      "no LocalBusiness/Organization schema on the homepage",
+      "no sameAs links \u2014 entity profiles are not wired to the site"
+    ]
+  },
+  "entity": {
+    "brand": "local.ch",
+    "wikidata": [
+      {
+        "qid": "Q134588573",
+        "label": "local.ch",
+        "desc": "The booking platform for Switzerland"
+      }
+    ],
+    "findings": [
+      "Wikidata entity found"
+    ]
+  },
+  "source_map": {
+    "query": "bestes altersheim bern",
+    "domains": [
+      {
+        "domain": "www.senevita.ch",
+        "hits": 4
+      },
+      {
+        "domain": "www.domicilbern.ch",
+        "hits": 2
+      },
+      {
+        "domain": "weyergut-bethanien.ch",
+        "hits": 1
+      },
+      {
+        "domain": "www.tertianum.ch",
+        "hits": 1
+      },
+      {
+        "domain": "www.alterszentrum-mattenhof.ch",
+        "hits": 1
+      },
+      {
+        "domain": "dammweg.ch",
+        "hits": 1
+      },
+      {
+        "domain": "alterssiedlung-buempliz.ch",
+        "hits": 1
+      },
+      {
+        "domain": "www.gsi.be.ch",
+        "hits": 1
+      }
+    ],
+    "findings": [
+      "8 unique domains surface for this query \u2014 these are the off-site properties to be present on"
+    ]
+  },
+  "scores": {
+    "technical": 25,
+    "schema": 10,
+    "entity": 25,
+    "source_map": 15,
+    "total": 75
+  }
+}

@@ -1,0 +1,226 @@
+--- PAGE 1 ---
+GEO Master Report
+How to Get Your Business Cited by ChatGPT, Perplexity, Gemini &
+Claude
+Short. Actionable. No ﬂuﬀ.
+August 2026
+--- PAGE 2 ---
+Contents
+1. What is GEO? (3-min read)
+2. The 4 AI Engines: What They Cite
+3. What GEO Agencies Actually Do
+4. Your 90-Day Action Plan
+5. Swiss Healthcare Case Study
+6. Tools & Cheat Sheets
+--- PAGE 3 ---
+1. What is GEO?
+3
+1. What is GEO?
+GEO = Getting AI engines to mention and cite your business in their answers.
+Traditional SEO = rank #1 on Google blue links.
+GEO = appear inside ChatGPT's answer when someone asks "best plumber in Zurich."
+AI answers cite only 2-3 sources. Being one of them is worth more than ranking #1 on
+Google.
+How it works (simple version):
+User asks a question →  AI searches the web →  ﬁnds chunks of text →  picks the best ones
+→  builds an answer →  cites sources.
+GEO makes sure your text chunks are the ones that get picked.
+Key numbers:
+45% of Google searches now show AI answers.
+Only 12% of AI-cited pages rank in Google's top 10.
+Adding statistics to your page increases AI citations by 30-40%.
+2. The 4 AI Engines: What They Cite
+Table 1 The 4 Engines at a Glance
+Engine Backend Top Source Cites per
+Answer What Wins
+ChatGPT Bing Index Wikipedia (16%) ~8 Fast pages, brand homepages, authority
+sites
+Perplexity Own index (200B+
+URLs)
+Reddit (47%) ~22 Reviews, comparisons, community
+content
+Gemini Google Index LinkedIn (14%) ~13 Traditional SEO + structured data
+Claude Brave Search NYT/Atlantic
+(15%)
+~6 Premium journalism, 2-4 week old
+content
+--- PAGE 4 ---
+3. What GEO Agencies Actually Do
+4
+Figure 1: Each engine pulls from diﬀerent sources. ChatGPT loves Wikipedia. Perplexity loves Reddit. Claude loves
+premium news.
+3. What GEO Agencies Actually Do
+3.1 The 4 Leading Platforms
+Table 2 Platform Comparison
+Platform What It Does Best For Price
+HeyLead.ai Swiss platform. 9 AI agents create 100-400 pages, monitor
+crawlers, build KI-Feed. Leads in 90-150 days.
+DACH businesses wanting
+done-for-you
+Custom
+(CHF)
+Profound Enterprise. 1.3B+ real prompts, CDN crawler tracking, content
+creation with 16 AI models.
+Large brands (Airbnb,
+Uber, LinkedIn)
+$99-
+399/mo
+Otterly.ai Monitors all 7 AI engines. 20+ factor GEO audit, competitor
+benchmarking, sentiment tracking.
+Agencies managing
+multiple clients
+$29-
+189/mo
+Peec AI Tracks citations across 6 engines. Distinguishes "used" vs
+"cited." G2 rating 4.9/5.
+Brands wanting citation
+analytics
+$150-
+800/mo
+--- PAGE 5 ---
+3. What GEO Agencies Actually Do
+5
+Figure 2: HeyLead leads in content workﬂow + Swiss focus. Profound dominates in data volume.
+3.2 The 7 Things Agencies Actually Do
+Every GEO agency, whether HeyLead or Profound, does these 7 things:
+1. Entity Setup — Create a Wikidata entry, Google Knowledge Graph presence, and
+Organization schema with sameAs links.
+2. Structured Data — Add FAQPage, LocalBusiness, HowTo schema. FAQPage alone
+increases AI citations by 3.2x.
+3. Answer-First Content — Rewrite pages to lead with facts, not ﬂuﬀ. Every paragraph
+must contain a citable fact.
+4. Citation Seeding — Get brand mentions on Reddit, Quora, industry blogs, directories,
+and news sites.
+5. Digital PR — Publish original research, guest posts, and expert commentary to earn
+authoritative mentions.
+6. Crawler Management — Conﬁgure robots.txt for 10 AI bots, deploy llms.txt, monitor bot
+visits.
+7. Monitoring — Track citations across 4 engines daily, measure Share of Voice, ﬂag
+hallucinations.
+3.3 The GEO Audit (8 Steps)
+--- PAGE 6 ---
+3. What GEO Agencies Actually Do
+6
+3. Run prompts on ChatGPT, Perplexity, Gemini, Claude.
+4. Score 7 dimensions: citation rate, mention rate, SoV, sentiment, source authority,
+hallucination rate, position vs competitors.
+5. Flag hallucinations: every false fact the AI says about your brand.
+6. Benchmark competitors: run the same prompts for 3-5 rivals.
+7. Prioritize actions: rank by expected impact vs eﬀort.
+8. Schedule re-audit: monthly for active campaigns.
+Figure 3: Before vs after 90 days of GEO. Every dimension improves dramatically.
+3.4 AI Crawler Management (Copy-Paste Ready)
+Add this to your robots.txt:
+--- PAGE 7 ---
+4. Your 90-Day Action Plan
+7
+4. Your 90-Day Action Plan
+Figure 3: 10 parallel workstreams across 3 phases. Foundation →  Content →  Scale.
+Days 0-30: Foundation
+Create Wikidata entry. Get your QID.
+Complete Google Business Proﬁle (every ﬁeld).
+Add Organization + LocalBusiness + FAQPage schema.
+Deploy robots.txt and llms.txt.
+Audit: run baseline prompts, score current visibility.
+Days 30-60: Content + Authority
+Rewrite top 10 pages: answer-ﬁrst, fact-heavy, speciﬁc data.
+Create FAQ page with 20+ questions + FAQPage schema.
+Build multilingual content (German, French, Italian).
+Get 3+ external mentions (guest posts, directories, interviews).
+Publish one original research piece (survey, data study).
+Days 60-90: Scale + Monitor
+Set up daily monitoring across 4 engines.
+--- PAGE 8 ---
+5. Swiss Healthcare Case Study
+8
+Compare Day 90 vs Day 1 results.
+Refresh content quarterly.
+Track competitor moves. Respond within one week.
+Document everything as SOPs for your team.
+5. Swiss Healthcare Case Study
+Goal: Make "Alterszentrum Bern-Mittelland" the top citation when someone asks "Bestes
+Alterszentrum fuer Senioren in Bern" on ChatGPT, Perplexity, Gemini, or Claude.
+What We Do (12 Steps)
+1. Entity Home: Build an "About" page opening with: "Alterszentrum Bern-Mittelland is a
+non-proﬁt senior care facility in Bern, Switzerland, providing 24-hour nursing care,
+dementia support, and rehabilitation for 120 residents since 1987."
+2. Wikidata: Create entry with QID, name (DE + FR), founding date, address, website,
+LinkedIn, Curaviva proﬁle.
+3. Schema Markup: Add Organization + LocalBusiness + FAQPage + HowTo schema.
+Validate with Google's Rich Results Test.
+4. Google Business Proﬁle: Complete every ﬁeld. Add 12 photos. Post weekly updates.
+Respond to all reviews within 24h.
+5. Directories: List on Curaviva, local.ch, search.ch, guidle.com, medregom.admin.ch.
+6. Content Rewrite: Rewrite services page with answer-ﬁrst structure, staﬀ-to-resident
+ratios, insurance details, speciﬁc equipment.
+7. FAQ Page: 20 questions organized by: Services, Costs, Admission, Dementia Care,
+Visiting. Add FAQPage schema.
+8. Multilingual: Create French versions of all key pages. Add hreﬂang tags.
+9. Digital PR: Publish research: "State of Dementia Care in Canton Bern: 2026 Survey." Pitch
+to Berner Zeitung.
+10. Community: Answer questions on r/Switzerland, Quora (senior care topics). Mention
+facility name in context.
+11. Monitoring: Daily prompt testing in DE/FR/EN across 4 engines. Track citation rate,
+position, sentiment.
+12. Refresh: Quarterly content updates. Monthly directory checks. Weekly competitor
+tracking.
+--- PAGE 9 ---
+6. Tools & Cheat Sheets
+9
+Expected Results (90 Days)
+Table 3 90-Day Targets
+Metric Day 0 Day 90
+Citation rate (German queries) 0-5% 40-60%
+Citation rate (French queries) 0% 20-30%
+Share of Voice vs competitors <5% 25-35%
+Hallucination rate Unknown 0%
+Directory listings 2-3 8-10
+6. Tools & Cheat Sheets
+Schema.org JSON-LD Template (Copy-Paste)
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://yoursite.com/#business",
+  "name": "Your Business Name",
+  "url": "https://yoursite.com",
+  "sameAs": [
+    "https://www.wikidata.org/wiki/Q12345678",
+    "https://www.linkedin.com/company/yourbrand",
+    "https://www.crunchbase.com/organization/yourbrand"
+  ],
+  "description": "Clear 1-2 sentence definition.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Street 123",
+    "addressLocality": "Bern",
+    "postalCode": "3011",
+    "addressCountry": "CH"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "46.9480",
+    "longitude": "7.4474"
+  }
+}
+</script>
+--- PAGE 10 ---
+6. Tools & Cheat Sheets
+10
+Recommended Tool Stack
+Table 4 Tools by Budget
+Task Free Paid
+Monitoring Manual prompt testing Otterly.ai ($29-189/mo)
+Citation tracking Google Alerts Peec AI ($150-800/mo)
+Schema validation Google Rich Results Test Schema App
+Wikidata Wikidata.org (free) N/A
+GEO audit Otterly free trial Profound ($99-399/mo)
+Content creation ChatGPT/Claude HeyLead.ai (custom)
+Key Takeaways
+GEO is not SEO. SEO ranks pages. GEO gets you cited inside AI answers.
+Start with entities. Wikidata + Schema.org + sameAs links are the foundation.
+Facts win. Statistics, dates, speciﬁc numbers increase citations by 30-40%.
+Every engine is diﬀerent. ChatGPT likes Wikipedia. Perplexity likes Reddit. Optimize for
+all four.
+90 days is enough. Foundation (30d) →  Content (30d) →  Monitor (30d). Leads ﬂow by
+day 90-150.

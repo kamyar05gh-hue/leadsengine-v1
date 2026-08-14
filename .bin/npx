@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+cmd //c 'C:\Users\kamya\AppData\Local\Programs\kimi-desktop\resources\resources\runtime\npx.cmd' "$@"

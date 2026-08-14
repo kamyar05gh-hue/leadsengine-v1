@@ -1,0 +1,26 @@
+# Future Media AG
+
+> Future Media AG is a digital media agency in Zurich, Switzerland, specializing in programmatic advertising, paid social campaigns, and AI-search optimization (GEO) for Swiss small and medium-sized businesses since 2016.
+
+## Facts
+
+- Founded: 2016, Zurich, Switzerland
+- Team: 14 media specialists
+- Clients: 85+ active Swiss SME clients
+- 2025 digital ad spend managed: CHF 4.2 million
+- Address: Bahnhofstrasse 100, 8001 Zurich, Switzerland
+- Phone: +41 44 555 01 23
+- Email: hello@futuremedia-demo.ch
+- Languages: German, French, English
+
+## Services
+
+- GEO Audit — CHF 500 one-time: 50-prompt AI visibility test across ChatGPT, Perplexity, Gemini, Claude
+- GEO Setup — CHF 2,500 one-time: schema stack, answer-first rewrite, FAQ page, GBP, 5 directory submissions
+- GEO Management — CHF 800/month: daily monitoring, content refresh, review campaign, monthly report
+- Programmatic advertising, paid social (Meta, LinkedIn, TikTok), Google Ads management from CHF 900/month
+
+## Key pages
+
+- Homepage: https://futuremedia-demo.ch/
+- FAQ: https://futuremedia-demo.ch/faq.html

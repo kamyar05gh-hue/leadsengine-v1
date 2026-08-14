@@ -1,0 +1,101 @@
+{
+  "domain": "www.futuremedia.ch",
+  "brand": "Future Media",
+  "robots": {
+    "reachable": false,
+    "status": -1,
+    "bots": {},
+    "findings": [
+      "robots.txt not reachable (HTTP -1) \u2014 engines may still crawl, but nothing is declared"
+    ]
+  },
+  "schema": {
+    "reachable": false,
+    "status": -1,
+    "types": [],
+    "findings": [
+      "homepage not reachable (HTTP -1)"
+    ]
+  },
+  "entity": {
+    "brand": "Future Media",
+    "wikidata": [
+      {
+        "qid": "Q5510716",
+        "label": "Future Media Architects",
+        "desc": "internet development company"
+      },
+      {
+        "qid": "Q120522759",
+        "label": "Future Media Framing: Analysis on the Modular Structure of Platform Media",
+        "desc": "scholarly article in Journal of Lanzhou University (Social Sciences), no. 2, 2020"
+      }
+    ],
+    "findings": [
+      "Wikidata entity found"
+    ]
+  },
+  "source_map": {
+    "query": "best digital media agency switzerland",
+    "domains": [
+      {
+        "domain": "oneline.ch",
+        "hits": 1
+      },
+      {
+        "domain": "darwindigital.com",
+        "hits": 1
+      },
+      {
+        "domain": "www.zdigitalagency.com",
+        "hits": 1
+      },
+      {
+        "domain": "one-media.ch",
+        "hits": 1
+      },
+      {
+        "domain": "wekre8.ch",
+        "hits": 1
+      },
+      {
+        "domain": "www.eseagency.ch",
+        "hits": 1
+      },
+      {
+        "domain": "clutch.co",
+        "hits": 1
+      },
+      {
+        "domain": "www.igvmedia.ch",
+        "hits": 1
+      },
+      {
+        "domain": "www.sortlist.com",
+        "hits": 1
+      },
+      {
+        "domain": "clockworkdigital.ch",
+        "hits": 1
+      },
+      {
+        "domain": "mediamix.ch",
+        "hits": 1
+      },
+      {
+        "domain": "ellarity.com",
+        "hits": 1
+      }
+    ],
+    "findings": [
+      "12 unique domains surface for this query \u2014 these are the off-site properties to be present on"
+    ]
+  },
+  "scores": {
+    "technical": 25,
+    "schema": 0,
+    "entity": 25,
+    "source_map": 15,
+    "total": 65
+  }
+}

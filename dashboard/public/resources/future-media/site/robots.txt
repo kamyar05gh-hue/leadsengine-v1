@@ -1,0 +1,38 @@
+# robots.txt — Future Media AG
+# Policy per Deep Research Report §2.5:
+# allow retrieval bots (citation eligibility), allow training bots (our IP strategy),
+# keep sensitive paths blocked, always reference the sitemap.
+
+# --- AI search/retrieval bots: ALLOW (citation eligibility) ---
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# --- Training bots: business decision → allowed ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# --- Universal protections ---
+User-agent: *
+Disallow: /admin/
+Disallow: /checkout/
+Disallow: /account/
+
+Sitemap: https://futuremedia-demo.ch/sitemap.xml

@@ -1,0 +1,40 @@
+node_modules/
+dist/
+build/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Runtime data / generated output — not part of the source tree
+*.db
+*.db-shm
+*.db-wal
+*.log
+server/reports/
+pipeline/reports/
+deliverables/
+server/.tmp-test/
+dashboard/public/reports/
+
+# Legacy pipeline generated outputs (client audit data — not source)
+pipeline/LeadEngine_Audit_*.pdf
+pipeline/report_*.pdf
+pipeline/audit_*.json
+pipeline/leadengine_audit_*.json
+pipeline/leadengine_data_*.md
+pipeline/comp_stats_resolved.json
+pipeline/page_mentions.json
+pipeline/redirect_cache.json
+
+# Legacy Python pipeline + old poller scripts — superseded by server/ (TypeScript).
+# Excluded from the published repo so the whole hosted project is TS-only.
+pipeline/
+.fm-poll.mjs
+.stop-before-pages.mjs
+run-monitoring.mjs
+fm-poll-output.log

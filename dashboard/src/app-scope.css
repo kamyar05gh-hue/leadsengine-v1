@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.app-scope {
+  --surface:        #0B0B0D;
+  --border:         #1C1C21;
+  --surface-inset:  #0E0E11;
+  --border-inset:   #16161A;
+  --accent:         #A78BFA;
+  --accent-hover:   #8B5CF6;
+  --accent-soft:    rgba(167, 139, 250, .12);
+
+  background-color: #000;
+  color: #F2F2F2;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+.app-scope button::before,
+.app-scope button::after { display: none !important; }
+
+.app-scope button {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  transform: none;
+}
+.app-scope button:hover:not(:disabled),
+.app-scope button:active:not(:disabled) {
+  background: transparent;
+  box-shadow: none;
+  color: #fff;
+  transform: none;
+}
+
+.app-scope button:focus,
+.app-scope button:focus-visible {
+  background: transparent;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.app-scope .tile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: border-color .16s ease, transform .16s ease, box-shadow .2s ease;
+}
+.app-scope button.tile:hover:not(:disabled),
+.app-scope .tile:hover {
+  background: var(--surface);
+  border-color: rgba(167, 139, 250, .45);
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 34px rgba(0,0,0,.45),
+    0 0 0 1px rgba(167, 139, 250, .14),
+    0 0 22px rgba(167, 139, 250, .10);
+}
+.app-scope button.tile:active:not(:disabled) {
+  background: var(--surface);
+  transform: translateY(0) scale(.995);
+}
+
+/* Static content cards get the same lift + accent border-glow on hover. */
+.app-scope .card-lift {
+  transition: border-color .16s ease, transform .16s ease, box-shadow .2s ease;
+}
+.app-scope .card-lift:hover {
+  border-color: rgba(167, 139, 250, .35);
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 34px rgba(0,0,0,.45),
+    0 0 0 1px rgba(167, 139, 250, .10),
+    0 0 22px rgba(167, 139, 250, .08);
+}
+
+.app-scope .tabs { display: flex; align-items: center; gap: 20px; }
+.app-scope button.tab {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: 0 2px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  color: #8A8A93;
+  transition: color .14s ease, border-color .14s ease;
+}
+.app-scope button.tab:hover:not(:disabled) { background: transparent; color: #fff; }
+.app-scope button.tab:active:not(:disabled) { transform: none; }
+.app-scope button.tab[data-active="true"] { color: #fff; border-bottom-color: var(--accent); }
+
+.app-scope button.navitem,
+.app-scope button.navitem:hover:not(:disabled),
+.app-scope button.navitem[data-active="true"] { background: transparent; }
+.app-scope button.navitem span {
+  border-bottom: 2px solid transparent;
+  padding-bottom: 6px;
+  transition: color .14s ease, border-color .14s ease;
+}
+.app-scope button.navitem:hover:not(:disabled) span { color: #fff; }
+.app-scope button.navitem[data-active="true"] span { color: #fff; border-bottom-color: var(--accent); }
+
+.app-scope .row { border-radius: 8px; transition: background-color .12s ease; }
+.app-scope .row:hover { background: rgba(255,255,255,.028); }
+/* Rows that navigate or trigger an action advertise it with the cursor. */
+.app-scope .row[data-clickable='true'],
+.app-scope a.row,
+.app-scope button.row { cursor: pointer; }
+
+/* Visibility ring (client header) — arc sweeps in on mount. */
+.app-scope .ring-progress { transition: stroke-dashoffset .7s cubic-bezier(.22, 1, .36, 1); }
+
+/* Browser autofill must never paint inputs white — force the inset surface. */
+.app-scope input:-webkit-autofill,
+.app-scope input:-webkit-autofill:hover,
+.app-scope input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #FFFFFF;
+  -webkit-box-shadow: 0 0 0 1000px #0E0E11 inset;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: #FFFFFF;
+}
+
+.app-scope ::-webkit-scrollbar { width: 6px; }
+.app-scope ::-webkit-scrollbar-track { background: #000; }
+.app-scope ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+.app-scope ::-webkit-scrollbar-thumb:hover { background: #8A8A93; }
+
+@keyframes pulse-dot { 0%,100% { opacity:1 } 50% { opacity:.4 } }
+.app-scope .pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
+
+/* ---- Pipeline stepper ------------------------------------------------- */
+
+/* Check pop-in when a stage completes (spring-ish scale). */
+@keyframes stepper-pop {
+  0%   { transform: scale(.35); opacity: 0; }
+  60%  { transform: scale(1.14); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.app-scope .stepper-pop { animation: stepper-pop .35s cubic-bezier(.34,1.4,.64,1) both; }
+
+/* Soft pulsing glow around the active (amber) step node. */
+@keyframes stepper-glow {
+  0%,100% { box-shadow: 0 0 0 0 rgba(232,160,76,.40); }
+  50%     { box-shadow: 0 0 0 8px rgba(232,160,76,.06); }
+}
+.app-scope .stepper-glow { animation: stepper-glow 2s ease-in-out infinite; }
+
+/* Connector fill sweeping left -> right when the step to its left completes. */
+@keyframes stepper-sweep { from { width: 0; } to { width: 100%; } }
+.app-scope .stepper-fill { animation: stepper-sweep .45s ease-out both; }
+
+/* ---- Loading shimmer (AI summary skeleton) ---------------------------- */
+@keyframes shimmer-slide { from { background-position: -600px 0; } to { background-position: 600px 0; } }
+.app-scope .shimmer {
+  background: linear-gradient(90deg, #0E0E11 0%, #17171C 45%, #0E0E11 90%);
+  background-size: 1200px 100%;
+  border-radius: 8px;
+  animation: shimmer-slide 1.5s linear infinite;
+}
+
+/* ---- Staggered gallery entrance --------------------------------------- */
+@keyframes fade-in-up { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.app-scope .stagger-item { animation: fade-in-up .35s ease both; }
+
+/* ---- Select primitive (floating listbox panel) ------------------------ */
+@keyframes select-in {
+  from { opacity: 0; transform: translateY(-3px) scale(.985); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes select-out {
+  from { opacity: 1; transform: none; }
+  to   { opacity: 0; transform: translateY(-3px) scale(.985); }
+}
+.select-panel { transform-origin: top center; animation: select-in .14s ease both; }
+.select-panel[data-closing] { animation: select-out .12s ease both; }
+
+/* NumberField: kill the browser's native spin buttons — they render as
+   tiny OS-styled grey arrows that ignore the design system. The primitive
+   draws its own chevron stepper instead (components/primitives/NumberField). */
+.app-scope input.number-field-input::-webkit-outer-spin-button,
+.app-scope input.number-field-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+.app-scope input.number-field-input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* Brand-name highlight inside mention excerpts (mark-style, purple tint). */
+.app-scope mark.brand-mark {
+  background: rgba(167, 139, 250, .16);
+  color: #E4DAFE;
+  border-radius: 4px;
+  padding: 0 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .select-panel,
+  .select-panel[data-closing] { animation: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-scope .stepper-pop,
+  .app-scope .stepper-glow,
+  .app-scope .stepper-fill,
+  .app-scope .shimmer,
+  .app-scope .stagger-item,
+  .app-scope .pulse-dot { animation: none; }
+  .app-scope .stagger-item { opacity: 1; transform: none; }
+  .app-scope .ring-progress { transition: none; }
+  .app-scope .tile:hover,
+  .app-scope .card-lift:hover { transform: none; }
+}

@@ -1,0 +1,302 @@
+--- PAGE 1 ---
+GEO DIY Playbook
+Step-by-Step: How to Actually Do It Yourself
+Tools, Click-by-Click Instructions, Templates
+No theory. Just actions.
+August 2026
+--- PAGE 2 ---
+Module 1: Check If AI Already Knows You
+2
+Module 1: Check If AI Already Knows You
+Time: 30 minutes. Cost: Free.
+Step 1: Open ChatGPT, Perplexity, Gemini, and Claude in 4 browser tabs.
+Step 2: Type this exact prompt in each: "What is [your business name] and what does it
+do?"
+Step 3: Write down what each AI says. Does it know you? Is the info correct? Does it
+cite your website?
+Step 4: Now type: "Best [your service] in [your city]" — e.g. "Best electrician in Zurich."
+Do you appear?
+Step 5: Save all 8 responses in a Google Sheet. Label: Correct / Wrong / Missing.
+Tip: If the AI says "I don't have information about..." — you are invisible. This is your
+starting point.
+Module 2: Fix Your Website So AI Can Read It
+Time: 2-4 hours. Cost: Free.
+2.1 Add the Magic Code (Schema.org)
+Schema markup is invisible code that tells AI exactly what your business is. Without it, AI
+guesses. With it, AI knows.
+Step 1: Copy this code. Replace everything in [brackets] with your real info.
+--- PAGE 3 ---
+Module 2: Fix Your Website So AI Can Read It
+3
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "[Your Business Name]",
+  "description": "[One clear sentence: What you do, for whom, since when]",
+  "url": "https://[your-website].ch",
+  "telephone": "[+41-XX-XXX-XX-XX]",
+  "email": "[email@yourbusiness.ch]",
+  "foundingDate": "[YYYY]",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[Street Number]",
+    "addressLocality": "[City]",
+    "postalCode": "[XXXX]",
+    "addressCountry": "CH"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "[XX.XXXX]",
+    "longitude": "[X.XXXX]"
+  },
+  "sameAs": [
+    "[Your Google Business Profile URL]",
+    "[Your LinkedIn page]",
+    "[Your Facebook page]",
+    "[Your Curaviva/Industry profile if exists]"
+  ]
+}
+</script>
+Step 2: Find your latitude/longitude: go to google.com/maps, right-click your building,
+copy the numbers.
+Step 3: Paste this code into the <head> section of your homepage. If you use
+WordPress, install the "Schema & Structured Data" plugin and paste it there.
+Step 4: Test it: go to validator.schema.org, paste your website URL, click Run Test.
+Green checkmarks = good. Red = ﬁx.
+2.2 Rewrite Your Homepage (Answer-First Method)
+AI does not read your whole page. It grabs the ﬁrst sentence of each section. So write those
+sentences as direct answers.
+--- PAGE 4 ---
+Module 2: Fix Your Website So AI Can Read It
+4
+Wrong: "Welcome to our website. We are a family-owned company dedicated to
+excellence since..." — AI ignores this.
+Right: "Meyer Elektro AG is an electrical contractor in Zurich specializing in
+residential wiring, smart home installation, and 24-hour emergency repairs since
+2005." — AI copies this into answers.
+Step 1: Open your homepage. Find the ﬁrst paragraph.
+Step 2: Rewrite it as: [Business Name] is a [service type] in [city] specializing in [3
+speciﬁc services] since [year].
+Step 3: Do this for every page. Services page, About page, Contact page.
+Step 4: Add speciﬁc numbers: "We serve 500+ homes per year," "Our team of 12
+certiﬁed electricians," "Average response time: 45 minutes."
+2.3 Create an FAQ Page (3.2x More AI Citations)
+Step 1: Write 15-20 questions your customers actually ask. Not marketing ﬂuﬀ. Real
+questions.
+Q: How much does an electrical safety inspection cost in Zurich?
+A: An electrical safety inspection (NIV / NIN inspection) in Zurich typically costs between CHF 
+250 and CHF 450 for a standard residential property up to 150m2. Larger properties or commercial 
+buildings require a custom quote. Contact us at +41 44 XXX XX XX for a precise estimate.
+Q: Do you offer 24-hour emergency electrical service?
+A: Yes. Meyer Elektro AG provides 24-hour emergency electrical repairs across Zurich and 
+surrounding areas. Our average response time is 45 minutes. Call our emergency hotline: +41 44 
+XXX XX XX.
+Step 2: Each answer must contain: a speciﬁc number, a city name, a phone number,
+and a time frame.
+Step 3: Add FAQPage schema. Use the Schema validator to test.
+Step 4: Publish the page. URL should be: yoursite.ch/faq or yoursite.ch/haeuﬁge-fragen
+--- PAGE 5 ---
+Module 3: Create Your Entity Everywhere
+5
+Module 3: Create Your Entity Everywhere
+Time: 3-4 hours. Cost: Free.
+AI cross-references facts about you across the internet. The more places your name appears
+with the same address, phone, and description, the more AI trusts you.
+3.1 Google Business Proﬁle (Do This First)
+Step 1: Go to business.google.com. Sign in with a Google account.
+Step 2: Search for your business. If it exists, claim it. If not, create it.
+Step 3: Fill out EVERY ﬁeld: Business name (exact, no extra keywords), Category
+(primary + 9 secondary), Address, Phone, Website, Hours (including holidays),
+Description (750 characters, include services, city, years in business), Services (add all
+20-30 services you oﬀer), Photos (add 20+ real photos: storefront, team, work
+examples), Products (if applicable), Q&A (add 5-10 common questions and answer
+them yourself).
+Step 4: Request veriﬁcation (Google sends a postcard with a code to your address).
+Step 5: Post weekly updates (oﬀers, new projects, team news). Respond to every review
+within 24 hours.
+3.2 Get Listed on Swiss Directories
+These are the directories AI checks for Swiss businesses:
+Free directories (must-do):
+local.ch — Create/update listing. Exact same name, address, phone as your website.
+search.ch — Same as above. Same NAP everywhere.
+Google Business Proﬁle (already done above).
+Apple Business Connect (mapsconnect.apple.com) — Free, takes 10 minutes.
+Bing Places (bingplaces.com) — Free, imports from GBP.
+--- PAGE 6 ---
+Module 4: Get Mentioned on the Web
+6
+Industry-speciﬁc (if applicable):
+Curaviva.ch — For elderly care facilities.
+fmh.ch — For doctors.
+home.ch / immoscout24.ch — For real estate.
+handwerk.ch / craftsman directories — For tradespeople.
+Critical: Your Name, Address, and Phone (NAP) must be IDENTICAL across every
+listing. "Meyer Elektro AG" on one site and "Meyer Elektro" on another confuses AI.
+3.3 Create a Wikidata Entry (Advanced but Powerful)
+Step 1: Go to wikidata.org. Create an account.
+Step 2: Click "Create a new item." Enter your business name.
+Step 3: Add these properties:
+instance of: business enterprise (Q4830453) or local business
+country: Switzerland (Q39)
+oﬃcial website: yoursite.ch
+street address: your full address
+phone number: +41 XX XXX XX XX
+email address: your email
+founding date: YYYY-MM-DD
+industry: your industry (search Wikidata for the right code)
+Step 4: Save. Note your QID (looks like Q123456789). Add this QID to your website's
+sameAs schema.
+Why this matters: Wikipedia and Wikidata are the #1 source ChatGPT cites. Having a
+Wikidata entry makes you "real" in AI's eyes.
+Module 4: Get Mentioned on the Web
+Time: Ongoing (2-3 hours/week). Cost: Free to low.
+--- PAGE 7 ---
+Module 4: Get Mentioned on the Web
+7
+AI learns about you from mentions across the internet. Every mention on a credible site
+increases your "entity authority."
+4.1 Reddit (Perplexity's #1 Source)
+Step 1: Create a Reddit account. Do NOT use your business name as username (looks
+spammy).
+Step 2: Find relevant subreddits: r/Switzerland, r/Zurich, r/Bern, r/AskSwitzerland,
+r/DIY, r/HomeImprovement.
+Step 3: Search for questions related to your service. E.g. "electrician zurich
+recommendation."
+Step 4: Write genuinely helpful answers. Only mention your business if it's truly
+relevant. Example: "I work as an electrician in Zurich. For NIN inspections, expect CHF
+250-450. Happy to answer speciﬁc questions if helpful."
+Step 5: Do this 2-3 times per week. Build karma ﬁrst by commenting on unrelated
+posts.
+4.2 Quora
+Step 1: Go to quora.com. Search for your service + Switzerland or your city.
+Step 2: Answer 3-5 questions per week. Be detailed. Include speciﬁc prices,
+timeframes, and local context.
+Step 3: In your Quora bio, add your business name and website. Every answer you
+write links to your bio.
+4.3 Guest Posts and Local Media
+Step 1: Write a 500-word article: "5 Things Every Zurich Homeowner Should Know
+About Electrical Safety."
+--- PAGE 8 ---
+Module 5: Monitor Your Progress
+8
+Step 2: Email it to: local newspapers (Berner Zeitung, Tages-Anzeiger, 20 Minuten),
+industry blogs, and community websites.
+Step 3: Include a short bio: "John Meyer is the founder of Meyer Elektro AG, a Zurich-
+based electrical contractor with 15 years of experience."
+Step 4: One guest post per month is enough. Quality over quantity.
+4.4 Reviews (Google, Facebook, Industry Sites)
+Step 1: After every completed job, send a review request via SMS/WhatsApp: "Hi
+[Name], thank you for choosing us! Would you mind leaving a quick review? It helps
+other [city] residents ﬁnd us: [Google review link]"
+Step 2: Target 5-10 new reviews per month. Respond to every review personally.
+Step 3: Reviews with speciﬁc details ("They installed 12 LED spots in our kitchen in 3
+hours") help AI more than generic "Great service" reviews.
+Module 5: Monitor Your Progress
+Time: 15 minutes/week. Cost: Free.
+5.1 The Simple Monitoring Method (Google Sheets)
+Step 1: Create a Google Sheet with these columns:
+Date | Prompt | ChatGPT (Y/N) | Perplexity (Y/N) | Gemini (Y/N) | Claude (Y/N) | Position | Notes
+Step 2: Every Monday, run these 6 prompts across all 4 AI engines:
+--- PAGE 9 ---
+Module 6: Build This as a Service for Clients
+9
+1. "Best [your service] in [your city]"
+2. "[Your business name] reviews"
+3. "[Your service] [your city] prices"
+4. "[Your business name] vs [competitor name]"
+5. "[Your city] [your service] near me"
+6. "Who is the best [your service] provider in [canton]"
+Step 3: For each prompt, mark Y if your business is mentioned, N if not. Note the
+position (1st, 2nd, 3rd).
+Step 4: After 4 weeks, calculate your citation rate: (Total Y's / Total possible) x 100.
+Target: 50%+ within 90 days.
+5.2 Automated Monitoring (Set Once, Run Forever)
+Free option:
+Google Alerts (google.com/alerts) — Set alerts for your business name, your name,
+and "best [service] [city]."
+Google Business Proﬁle Insights — Check weekly for "how customers found you."
+Paid option ($29-99/month):
+Otterly.ai — Tracks all 7 AI engines automatically. Shows citation trends.
+Peec AI — Tracks when AI "uses" vs "cites" your content.
+Module 6: Build This as a Service for Clients
+If you want to oﬀer GEO as a service to Swiss businesses, here is the exact service package:
+--- PAGE 10 ---
+Module 6: Build This as a Service for Clients
+10
+6.1 Service Tiers
+Tier 1 - GEO Audit (CHF 500 one-time):
+Run 50 prompts across 4 AI engines.
+Score current visibility (0-100).
+Identify hallucinations and wrong facts.
+Competitor benchmark (3 competitors).
+Deliver: 10-page PDF report with action list.
+Tier 2 - GEO Setup (CHF 2,500 one-time):
+Everything in Tier 1, plus:
+Schema.org markup implementation.
+Homepage rewrite (answer-ﬁrst structure).
+FAQ page creation (20 questions + schema).
+Google Business Proﬁle optimization.
+5 directory submissions (local.ch, search.ch, etc.).
+robots.txt + llms.txt deployment.
+Tier 3 - GEO Management (CHF 800/month):
+Everything in Tier 2, plus:
+Weekly AI monitoring across 4 engines.
+Monthly content update (1 blog post or FAQ addition).
+Review generation campaign (5-10 reviews/month).
+Competitor tracking and response.
+Monthly report with citation rate, SoV, and recommendations.
+6.2 Client Onboarding Checklist
+Week 1:
+Sign contract and collect access (website CMS, GBP login, social accounts).
+Run baseline audit (50 prompts, save all responses).
+Send audit report. Schedule kickoﬀ call.
+--- PAGE 11 ---
+Module 6: Build This as a Service for Clients
+11
+Week 2:
+Implement schema markup on website.
+Rewrite homepage and key pages.
+Create FAQ page.
+Optimize Google Business Proﬁle.
+Week 3:
+Submit to 5 Swiss directories.
+Create Wikidata entry.
+Deploy robots.txt and llms.txt.
+Start ﬁrst guest post outreach.
+Week 4:
+Run ﬁrst re-audit. Compare to baseline.
+Send Week 4 progress report.
+Begin monthly monitoring cycle.
+6.3 ROI Proof for Clients
+Show clients these metrics monthly:
+Citation Rate: % of prompts where AI mentions them. Target: 50%+.
+Share of Voice: Their mentions / total competitor mentions. Target: top 3.
+Hallucination Count: Number of false facts AI says about them. Target: zero.
+Review Growth: New Google reviews per month. Target: 5-10.
+Website Traﬃc from AI: Use UTM tags to track clicks from AI citations.
+--- PAGE 12 ---
+Quick Reference: Checklist
+12
+Quick Reference: Checklist
+Week 1 Checklist:
+Run AI visibility test (4 engines x 6 prompts = 24 tests)
+Add LocalBusiness schema to homepage
+Rewrite homepage ﬁrst paragraph (answer-ﬁrst)
+Claim/optimize Google Business Proﬁle
+Week 2 Checklist:
+Create FAQ page (15-20 questions + FAQPage schema)
+Submit to local.ch and search.ch
+Deploy robots.txt with AI crawler rules
+Create llms.txt
+Week 3 Checklist:
+Create Wikidata entry
+Write ﬁrst guest post
+Answer 3 questions on Reddit and Quora
+Request 5 Google reviews from past customers
+Week 4 Checklist:
+Re-run AI visibility test
+Compare to Week 1 baseline
+Document results in Google Sheet
+Plan Month 2 content
+That's it. Do these steps. Check them oﬀ. Repeat monthly.
